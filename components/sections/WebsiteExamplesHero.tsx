@@ -131,7 +131,7 @@ export default function WebsiteExamplesHero() {
           </div>
 
           {/* Center Column: Car detailing (bottom center) */}
-          <div className="flex flex-col items-center justify-end">
+          <div className="flex flex-col items-center justify-end md:-translate-x-48 md:-translate-y-14">
             {/* Image 4 - car detailing (bottom center) */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
