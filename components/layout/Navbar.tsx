@@ -49,7 +49,7 @@ const navLinks: NavLink[] = [
     items: [
       {
         label: "Website examples",
-        href: "#customers",
+        href: "/website-examples",
         icon: "layout",
       },
       {
