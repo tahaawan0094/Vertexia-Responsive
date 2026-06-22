@@ -92,7 +92,7 @@ export default function WebsiteExamplesHero() {
       </StaggerContainer>
 
       {/* Image Grid — responsive 3-column layout */}
-      <div className="relative mx-auto mt-14 w-full max-w-none px-4 lg:px-8">
+      <div className="relative mx-auto mt-14 md:-mt-[80px] lg:-mt-[150px] w-full max-w-none px-4 lg:px-8">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:items-end">
           
           {/* Left Column: Spa (top) & Dog (bottom) - aligned to the absolute left corner */}
