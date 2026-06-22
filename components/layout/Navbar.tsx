@@ -347,13 +347,7 @@ export default function Navbar() {
                 </div>
               ))}
 
-              <a
-                href="#"
-                onClick={() => setMobileMenuOpen(false)}
-                className="mt-2 block rounded-lg bg-[#FF5A4E] px-3 py-2 text-center font-semibold text-white transition hover:bg-[#ff6b5c]"
-              >
-                Login
-              </a>
+             
             </div>
           </motion.div>
         )}
