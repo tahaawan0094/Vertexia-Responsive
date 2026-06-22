@@ -168,20 +168,22 @@ export default function WebsiteExamplesHero() {
             </motion.div>
 
             {/* Image 5 - fitness (bottom right) */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.35, ease: [0.21, 0.47, 0.32, 0.98] }}
-              className="relative w-full max-w-[320px] overflow-hidden rounded-2xl"
-              style={{ aspectRatio: "4/3" }}
-            >
-              <img
-                src="/website example/vertexia-web-dev.png"
-                alt="Fitness Website Example"
-                className="h-full w-full object-cover"
-              />
-            </motion.div>
+            <div className="w-full flex justify-center lg:justify-end md:-translate-x-[420px]">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.35, ease: [0.21, 0.47, 0.32, 0.98] }}
+                className="relative w-full max-w-[320px] overflow-hidden rounded-2xl"
+                style={{ aspectRatio: "4/3" }}
+              >
+                <img
+                  src="/website example/vertexia-web-dev.png"
+                  alt="Fitness Website Example"
+                  className="h-full w-full object-cover"
+                />
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>
