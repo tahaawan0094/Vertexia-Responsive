@@ -40,7 +40,7 @@ export default function WebsiteExamplesHero() {
   return (
     <section
       id="website-examples-hero"
-      className="relative overflow-hidden bg-[#0a0a0a] pt-20 pb-0 text-center"
+      className="relative overflow-hidden bg-[#0a0a0a] pt-20 pb-0 text-center font-body"
     >
       {/* Background subtle vignette */}
       <div
@@ -58,16 +58,17 @@ export default function WebsiteExamplesHero() {
 
         {/* Heading */}
         <StaggerItem>
-          <h1 className="mb-6 text-balance text-[clamp(2.6rem,6vw,4.2rem)] font-bold leading-[1.1] text-white">
+          <h1 className="mb-6 text-[clamp(2.2rem,5vw,3.6rem)] font-semi-bold leading-[1.1] text-white lg:whitespace-nowrap">
             Wow them with your website
           </h1>
         </StaggerItem>
 
         {/* Subtext */}
         <StaggerItem>
-          <p className="mx-auto mb-8 max-w-[500px] text-[1.05rem] leading-relaxed text-white/60">
-            Do you know who else we wow? Our customers! More than 5,000 of them
-            have rated us{" "}
+          <p className="mx-auto mb-8 max-w-[600px] text-[1.05rem] leading-relaxed text-white/60">
+            Do you know who else we wow? Our customers! More than 5,000
+            <br className="hidden sm:inline" /> of them have rated us
+            <br className="hidden sm:inline" />{" "}
             <a
               href="https://www.trustpilot.com"
               target="_blank"
