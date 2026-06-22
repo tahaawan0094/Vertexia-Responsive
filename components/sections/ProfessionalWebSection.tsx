@@ -8,14 +8,67 @@ export default function ProfessionalWebSection({
   centered?: boolean;
 }) {
   return (
-    <section className="relative overflow-visible bg-[linear-gradient(135deg,#1a75ff_0%,#1a2ce2_45%,#2a2fe8_100%)] px-6 pb-16 pt-20 text-white">
+    <section
+      className="relative overflow-hidden px-6 pb-16 pt-20 text-white"
+      style={{
+        background: "linear-gradient(120deg, #1338be 0%, #1a6bff 45%, #00c2e0 100%)",
+      }}
+    >
+      {/* Keyframe animation for the shine sweep */}
+      <style>{`
+        @keyframes pro-shine {
+          0%   { transform: translateX(-130%) skewX(-20deg); }
+          100% { transform: translateX(230%) skewX(-20deg); }
+        }
+        .pro-shine-sweep {
+          animation: pro-shine 3.6s ease-in-out infinite;
+        }
+      `}</style>
+
+      {/* Right-side cyan aurora glow */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 65% 90% at 92% 50%, rgba(0,210,255,0.5) 0%, transparent 65%)",
+        }}
+        aria-hidden="true"
+      />
+      {/* Left-side deep purple glow */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 45% 70% at 4% 55%, rgba(80,60,255,0.38) 0%, transparent 65%)",
+        }}
+        aria-hidden="true"
+      />
+      {/* Center top soft highlight */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 55% 50% at 48% 0%, rgba(255,255,255,0.10) 0%, transparent 70%)",
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Animated diagonal shine sweep */}
+      <div
+        aria-hidden="true"
+        className="pro-shine-sweep pointer-events-none absolute inset-y-0 left-0 w-[30%]"
+        style={{
+          background:
+            "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 45%, rgba(255,255,255,0.24) 55%, transparent 100%)",
+        }}
+      />
 
       {/* Background Decoration */}
       <img
         src="/images%209/66030a8f80bb3baa5b0aaa1b_detail-mkt-right.svg"
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute right-0 top-0 w-[min(220px,80vw)] opacity-50"
+        className="pointer-events-none absolute right-0 top-0 w-[min(220px,80vw)] opacity-30"
       />
 
       <FadeIn>
