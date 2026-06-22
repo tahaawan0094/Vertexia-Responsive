@@ -259,6 +259,82 @@ export default function WebsiteExamplesGallery() {
         </div>
       </div>
 
+      {/* CTA Banner */}
+      <style>{`
+        @keyframes cta-shine {
+          0%   { transform: translateX(-120%) skewX(-20deg); }
+          100% { transform: translateX(220%) skewX(-20deg); }
+        }
+        .cta-shine-sweep {
+          animation: cta-shine 3.2s ease-in-out infinite;
+        }
+      `}</style>
+
+      <div className="relative z-10 mx-auto max-w-[1280px] px-6 pb-20 pt-16 max-[640px]:pt-10 max-[640px]:pb-14">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="relative overflow-hidden rounded-[20px] px-10 py-14 text-center md:py-16 max-[640px]:px-6 max-[640px]:py-10"
+          style={{
+            background: "linear-gradient(120deg, #1338be 0%, #1a6bff 45%, #00c2e0 100%)",
+          }}
+        >
+          {/* Right-side cyan aurora glow */}
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(ellipse 65% 90% at 88% 50%, rgba(0,210,255,0.55) 0%, transparent 65%)",
+            }}
+            aria-hidden="true"
+          />
+          {/* Left-side deep purple glow */}
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(ellipse 45% 70% at 8% 55%, rgba(80,60,255,0.4) 0%, transparent 65%)",
+            }}
+            aria-hidden="true"
+          />
+          {/* Center top soft highlight */}
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(ellipse 55% 50% at 48% 0%, rgba(255,255,255,0.12) 0%, transparent 70%)",
+            }}
+            aria-hidden="true"
+          />
+
+          {/* Animated diagonal shine sweep */}
+          <div
+            aria-hidden="true"
+            className="cta-shine-sweep pointer-events-none absolute inset-y-0 left-0 w-[28%]"
+            style={{
+              background:
+                "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.22) 45%, rgba(255,255,255,0.28) 55%, transparent 100%)",
+            }}
+          />
+
+          {/* Content */}
+          <div className="relative z-10">
+            <h2 className="mx-auto max-w-[640px] text-[clamp(1.7rem,3.5vw,2.6rem)] font-bold leading-tight text-white max-[640px]:text-[1.5rem]">
+              We&apos;ll build you a customer-wowing website in just 7 days
+            </h2>
+            <a
+              href="/pricing"
+              id="gallery-cta-get-started"
+              className="mt-8 inline-flex rounded-[10px] bg-[#FF5A4E] px-10 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(255,90,78,0.4)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#ff4133] hover:shadow-[0_14px_34px_rgba(255,90,78,0.5)]"
+            >
+              Get Started
+            </a>
+          </div>
+        </motion.div>
+      </div>
+
       {/* Showcase Modal Panel */}
       <AnimatePresence>
         {activeItem && (
