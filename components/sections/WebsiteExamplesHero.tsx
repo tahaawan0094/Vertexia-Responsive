@@ -92,11 +92,11 @@ export default function WebsiteExamplesHero() {
       </StaggerContainer>
 
       {/* Image Grid — responsive 3-column layout */}
-      <div className="relative mx-auto mt-14 md:-mt-[80px] lg:-mt-[150px] w-full max-w-none px-4 lg:px-8">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:items-end">
+      <div className="relative mx-auto mt-14 md:-mt-[80px] lg:-mt-[150px] w-full max-w-[1280px] px-4 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-end">
           
-          {/* Left Column: Spa (top) & Dog (bottom) - aligned to the absolute left corner */}
-          <div className="flex flex-col gap-6 items-center lg:items-start">
+          {/* Left Column: Spa (top) & Dog (bottom) - aligned to the absolute left corner on desktop */}
+          <div className="flex flex-col sm:flex-row lg:flex-col gap-6 items-center lg:items-start justify-center">
             {/* Image 1 - spa (top left) */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -131,7 +131,7 @@ export default function WebsiteExamplesHero() {
           </div>
 
           {/* Center Column: Car detailing (bottom center) */}
-          <div className="flex flex-col items-center justify-end md:-translate-x-48 md:-translate-y-14">
+          <div className="flex flex-col items-center justify-end lg:-translate-x-48 lg:-translate-y-14">
             {/* Image 4 - car detailing (bottom center) */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -149,8 +149,8 @@ export default function WebsiteExamplesHero() {
             </motion.div>
           </div>
 
-          {/* Right Column: Eyewear (top) & Salon (bottom) - aligned to the absolute right corner */}
-          <div className="flex flex-col gap-6 items-center lg:items-end relative">
+          {/* Right Column: Eyewear (top) & Salon (bottom) - aligned to the absolute right corner on desktop */}
+          <div className="flex flex-col sm:flex-row lg:flex-col gap-6 items-center lg:items-end justify-center relative">
             {/* Image 2 - eyewear (top right) */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -184,7 +184,7 @@ export default function WebsiteExamplesHero() {
             </motion.div>
 
             {/* Image 5 - fitness (bottom right) */}
-            <div className="w-full flex justify-center lg:justify-end md:absolute md:-left-[360px] md:bottom-0">
+            <div className="w-full flex justify-center lg:justify-end lg:absolute lg:-left-[360px] lg:bottom-0">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
