@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import WebsiteExamplesHero from "@/components/sections/WebsiteExamplesHero";
+import WebsiteExamplesGallery from "@/components/sections/WebsiteExamplesGallery";
 
 export const metadata: Metadata = {
   title: "Website Examples | Vertexia — See Our Work",
@@ -14,6 +15,7 @@ export default function WebsiteExamplesPage() {
   return (
     <main className="site">
       <WebsiteExamplesHero />
+      <WebsiteExamplesGallery />
     </main>
   );
 }
