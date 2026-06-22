@@ -70,7 +70,7 @@ export default function WebsiteExamplesHero() {
             <br className="hidden sm:inline" /> of them have rated us
             <br className="hidden sm:inline" />{" "}
             <a
-              href="https://www.trustpilot.com"
+              href="https://www.trustpilot.com/review/vertexiaio.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-white/90 underline underline-offset-3 transition hover:text-white"
