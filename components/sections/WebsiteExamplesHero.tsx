@@ -92,54 +92,70 @@ export default function WebsiteExamplesHero() {
         </StaggerItem>
       </StaggerContainer>
 
-      {/* Image Grid — responsive 3-column layout */}
+      {/* Image Grid — robust responsive layout */}
       <div className="relative mx-auto mt-14 md:-mt-[80px] lg:-mt-[150px] w-full max-w-[1280px] px-4 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-end">
-          
-          {/* Left Column: Spa (top) & Dog (bottom) - aligned to the absolute left corner on desktop */}
-          <div className="flex flex-col sm:flex-row lg:flex-col gap-6 items-center lg:items-start justify-center">
-            {/* Image 1 - spa (top left) */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
-              className="relative w-full max-w-[320px] overflow-hidden rounded-2xl"
-              style={{ aspectRatio: "4/3" }}
-            >
-              <img
-                src="/website example/website-example-vertexia.png"
-                alt="Spa & Wellness Website Example"
-                className="h-full w-full object-cover"
-              />
-            </motion.div>
+        
+        {/* Row 1 (Top): Spa and Eyewear flanking the text on desktop */}
+        <div className="flex justify-between items-end w-full">
+          {/* Image 1 - spa (top left) */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="relative w-[48%] lg:w-[22%] overflow-hidden rounded-2xl"
+            style={{ aspectRatio: "4/3" }}
+          >
+            <img
+              src="/website example/website-example-vertexia.png"
+              alt="Spa & Wellness Website Example"
+              className="h-full w-full object-cover"
+            />
+          </motion.div>
 
-            {/* Image 3 - pet grooming (bottom left) */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
-              className="relative w-full max-w-[320px] overflow-hidden rounded-2xl"
-              style={{ aspectRatio: "4/3" }}
-            >
-              <img
-                src="/website example/vertexia-website-example.png"
-                alt="Pet Grooming Website Example"
-                className="h-full w-full object-cover"
-              />
-            </motion.div>
-          </div>
+          {/* Image 2 - eyewear (top right) */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.3, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="relative w-[48%] lg:w-[22%] overflow-hidden rounded-2xl"
+            style={{ aspectRatio: "4/3" }}
+          >
+            <img
+              src="/website example/vertexia-agency.png"
+              alt="Eyewear Store Website Example"
+              className="h-full w-full object-cover"
+            />
+          </motion.div>
+        </div>
 
-          {/* Center Column: Car detailing (bottom center) */}
-          <div className="flex flex-col items-center justify-end lg:-translate-x-48 lg:-translate-y-14">
-            {/* Image 4 - car detailing (bottom center) */}
+        {/* Row 2 (Bottom): Dog, Car, Fitness, Salon */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 w-full mt-6 lg:mt-8">
+          {/* Image 3 - pet grooming (bottom far-left) */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="relative w-full overflow-hidden rounded-2xl"
+            style={{ aspectRatio: "4/3" }}
+          >
+            <img
+              src="/website example/vertexia-website-example.png"
+              alt="Pet Grooming Website Example"
+              className="h-full w-full object-cover"
+            />
+          </motion.div>
+
+          {/* Image 4 - car detailing (bottom middle-left) */}
+          <div className="w-full lg:-translate-y-10">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.25, ease: [0.21, 0.47, 0.32, 0.98] }}
-              className="relative w-full max-w-[320px] overflow-hidden rounded-2xl"
+              className="relative w-full overflow-hidden rounded-2xl"
               style={{ aspectRatio: "4/3" }}
             >
               <img
@@ -150,31 +166,30 @@ export default function WebsiteExamplesHero() {
             </motion.div>
           </div>
 
-          {/* Right Column: Eyewear (top) & Salon (bottom) - aligned to the absolute right corner on desktop */}
-          <div className="flex flex-col sm:flex-row lg:flex-col gap-6 items-center lg:items-end justify-center relative">
-            {/* Image 2 - eyewear (top right) */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.3, ease: [0.21, 0.47, 0.32, 0.98] }}
-              className="relative w-full max-w-[320px] overflow-hidden rounded-2xl"
-              style={{ aspectRatio: "4/3" }}
-            >
-              <img
-                src="/website example/vertexia-agency.png"
-                alt="Eyewear Store Website Example"
-                className="h-full w-full object-cover"
-              />
-            </motion.div>
+          {/* Image 5 - fitness (bottom middle-right) */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.35, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="relative w-full overflow-hidden rounded-2xl"
+            style={{ aspectRatio: "4/3" }}
+          >
+            <img
+              src="/website example/vertexia-web-dev.png"
+              alt="Fitness Website Example"
+              className="h-full w-full object-cover"
+            />
+          </motion.div>
 
-            {/* Image 6 - hair salon (bottom right, below eyewear) */}
+          {/* Image 6 - hair salon (bottom far-right) */}
+          <div className="w-full lg:translate-y-10">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.32, ease: [0.21, 0.47, 0.32, 0.98] }}
-              className="relative w-full max-w-[320px] overflow-hidden rounded-2xl"
+              transition={{ duration: 0.7, delay: 0.45, ease: [0.21, 0.47, 0.32, 0.98] }}
+              className="relative w-full overflow-hidden rounded-2xl"
               style={{ aspectRatio: "4/3" }}
             >
               <img
@@ -183,24 +198,6 @@ export default function WebsiteExamplesHero() {
                 className="h-full w-full object-cover"
               />
             </motion.div>
-
-            {/* Image 5 - fitness (bottom right) */}
-            <div className="w-full flex justify-center lg:justify-end lg:absolute lg:-left-[360px] lg:bottom-0">
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: 0.35, ease: [0.21, 0.47, 0.32, 0.98] }}
-                className="relative w-full max-w-[320px] overflow-hidden rounded-2xl"
-                style={{ aspectRatio: "4/3" }}
-              >
-                <img
-                  src="/website example/vertexia-web-dev.png"
-                  alt="Fitness Website Example"
-                  className="h-full w-full object-cover"
-                />
-              </motion.div>
-            </div>
           </div>
         </div>
       </div>
