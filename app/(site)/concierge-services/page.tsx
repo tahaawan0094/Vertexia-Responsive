@@ -52,7 +52,7 @@ export default function ConciergeServicesPage() {
             <div className="text-center mb-6">
               <h2 className="text-[52px] leading-[1.15] font-bold text-white mb-6 max-[640px]:text-[34px] max-[640px]:leading-tight">
                 Unlimited{" "}
-                <span className="inline-block border-l-4 border-[#ff5533] bg-[linear-gradient(-50deg,rgba(223,70,44,0)_22%,rgba(255,80,50,0.55))] px-3 py-1 text-white">
+                <span className="inline-block border-l-4 border-[#109f7a] bg-[linear-gradient(-50deg,rgba(11,77,58,0)_22%,rgba(16,115,87,0.55))] px-3 py-1 text-white">
                   website edits
                 </span>
                 <br />
