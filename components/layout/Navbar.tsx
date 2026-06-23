@@ -36,7 +36,7 @@ const navLinks: NavLink[] = [
       },
       {
         label: "Concierge services",
-        href: "#services",
+        href: "/concierge-services",
         icon: "user-check",
       },
     ],
