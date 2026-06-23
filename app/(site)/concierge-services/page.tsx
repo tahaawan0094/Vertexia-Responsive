@@ -46,7 +46,7 @@ export default function ConciergeServicesPage() {
         <ConciergeHeroSection />
 
         {/* Unlimited Website Edits Section */}
-        <section className="px-4 py-24 sm:px-6 lg:px-8 bg-transparent">
+        <section className="px-4 py-24 sm:px-6 lg:px-8 bg-[#040404] relative z-10">
           <div className="mx-auto max-w-[1200px]">
             {/* Heading */}
             <div className="text-center mb-6">
