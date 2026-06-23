@@ -20,7 +20,7 @@ export default function ConciergeHeroSection() {
         </span>
 
         {/* Hero Title */}
-        <h1 className="mx-auto max-w-[1100px] text-[70px] leading-[80px] font-medium tracking-[-0.03em] text-white sm:text-[60px] sm:leading-[70px] max-[640px]:text-[38px] max-[640px]:leading-[46px]">
+        <h1 className="mx-auto max-w-[1100px] text-[72px] leading-[94px] font-medium tracking-[-0.03em] text-white/80 max-[640px]:text-[38px] max-[640px]:leading-[48px]">
           Get the{"  "}
           <span className="box-decoration-clone inline-block border-l-4 border-[#8b5cf6] bg-[linear-gradient(-50deg,rgba(139,92,246,0)_22%,rgba(139,92,246,0.65))] px-3 py-1 text-white/90">
             VIP experience
@@ -44,7 +44,7 @@ export default function ConciergeHeroSection() {
         </a>
 
         {/* Layered Laptop/Browser Mockup Composition */}
-        <div className="relative mt-20 w-full max-w-[1000px] mx-auto">
+        <div className="relative mt-20 w-full max-w-[1200px] mx-auto">
           {/* Ambient background glow specifically centering the laptop */}
           <div
             className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] rounded-full bg-[radial-gradient(circle_at_center,rgba(139,92,246,0.22)_0%,rgba(139,92,246,0)_70%)] blur-[40px] z-0"
