@@ -70,7 +70,7 @@ export default function ConciergeHeroSection() {
 
             {/* Inner web page content */}
             <div 
-              className="absolute top-[14.2%] left-[0.25%] right-[0.25%] bottom-[0.25%] rounded-b-[18px] overflow-hidden z-20 bg-cover bg-top bg-no-repeat border-[30px] border-[#0B0B0B]"
+              className="absolute top-[14.2%] left-[0.25%] right-[0.25%] bottom-[0.25%] rounded-b-[18px] overflow-hidden z-20 bg-cover bg-top bg-no-repeat border-[50px] border-[#0B0B0B]"
               style={{ backgroundImage: "url('/concierge services images/concierge-services-vertexia.webp')" }}
             >
               <img
