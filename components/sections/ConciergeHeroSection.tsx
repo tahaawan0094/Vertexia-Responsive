@@ -7,7 +7,7 @@ export default function ConciergeHeroSection() {
     <section className="relative overflow-visible pb-24 pt-16 text-center px-4 max-[640px]:pb-16 max-[640px]:pt-10 max-[420px]:px-3">
       {/* Background glow behind hero text */}
       <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-[400px] bg-[linear-gradient(180deg,rgba(0,0,0,0.9)_0%,rgba(8,8,8,0)_100%)]"
+        className="pointer-events-none absolute inset-x-0 top-0 h-[400px] bg-[linear-gradient(180deg,rgba(223,70,44,0.9)_0%,rgba(223,70,44,0)_100%)]"
         aria-hidden="true"
       />
 
