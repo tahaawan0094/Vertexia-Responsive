@@ -106,6 +106,20 @@ export default function ConciergeServicesPage() {
           </div>
         </section>
 
+        {/* Magic Service Banner Section */}
+        <section className="bg-[#040404] py-12 relative z-10">
+          <div className="w-full bg-gradient-to-r from-[#06281e] via-[#0b4d3a] to-[#06281e] py-8 text-center border-y border-white/5">
+            <div className="mx-auto max-w-[1200px] px-4">
+              <h3 className="text-white text-xl md:text-[24px] font-light leading-snug">
+                <span className="font-bold">Discover VERTEXIA’s magic:</span> the service.
+              </h3>
+              <p className="mt-2 text-white/90 text-base md:text-lg font-normal">
+                Our team provides agency-level support at a do-it-yourself price.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* How It Works Section */}
         <HowItWorksSection showButton />
 
