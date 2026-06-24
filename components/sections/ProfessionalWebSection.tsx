@@ -2,20 +2,19 @@
 
 import FadeIn from "@/components/animations/FadeIn";
 
-export default function ProfessionalWebSection({
-  centered = false,
+export default function ProfessionalWebSectionCopy({
+    centered = false,
 }: {
-  centered?: boolean;
+    centered?: boolean;
 }) {
-  return (
-    <section
-      className="relative overflow-hidden px-6 pb-16 pt-20 text-white"
-      style={{
-        background: "linear-gradient(120deg, #1338be 0%, #1a6bff 45%, #00c2e0 100%)",
-      }}
-    >
-      {/* Keyframe animation for the shine sweep */}
-      <style>{`
+    return (
+        <section
+            className="relative overflow-hidden px-6 pb-16 pt-20 text-white"
+            style={{
+                 background: "linear-gradient(120deg, #1338be 0%, #1a6bff 45%, #00c2e0 100%)",
+            }}
+        >
+            <style>{`
         @keyframes pro-shine {
           0%   { transform: translateX(-130%) skewX(-20deg); }
           100% { transform: translateX(230%) skewX(-20deg); }
@@ -25,87 +24,59 @@ export default function ProfessionalWebSection({
         }
       `}</style>
 
-      {/* Right-side cyan aurora glow */}
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse 65% 90% at 92% 50%, rgba(0,210,255,0.5) 0%, transparent 65%)",
-        }}
-        aria-hidden="true"
-      />
-      {/* Left-side deep purple glow */}
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse 45% 70% at 4% 55%, rgba(80,60,255,0.38) 0%, transparent 65%)",
-        }}
-        aria-hidden="true"
-      />
-      {/* Center top soft highlight */}
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse 55% 50% at 48% 0%, rgba(255,255,255,0.10) 0%, transparent 70%)",
-        }}
-        aria-hidden="true"
-      />
+            <div
+                className="pointer-events-none absolute inset-0"
+                style={{
+                    background:
+                        "radial-gradient(ellipse 65% 90% at 92% 50%, rgba(16,185,129,0.45) 0%, transparent 65%)",
+                }}
+                aria-hidden="true"
+            />
+            <div
+                className="pointer-events-none absolute inset-0"
+                style={{
+                    background:
+                        "radial-gradient(ellipse 45% 70% at 4% 55%, rgba(5,150,105,0.38) 0%, transparent 65%)",
+                }}
+                aria-hidden="true"
+            />
+            <div
+                className="pointer-events-none absolute inset-0"
+                style={{
+                    background:
+                        "radial-gradient(ellipse 55% 50% at 48% 0%, rgba(255,255,255,0.10) 0%, transparent 70%)",
+                }}
+                aria-hidden="true"
+            />
 
-      {/* Animated diagonal shine sweep */}
-      <div
-        aria-hidden="true"
-        className="pro-shine-sweep pointer-events-none absolute inset-y-0 left-0 w-[30%]"
-        style={{
-          background:
-            "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 45%, rgba(255,255,255,0.24) 55%, transparent 100%)",
-        }}
-      />
+            <div
+                aria-hidden="true"
+                className="pro-shine-sweep pointer-events-none absolute inset-y-0 left-0 w-[30%]"
+                style={{
+                    background:
+                        "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 45%, rgba(255,255,255,0.24) 55%, transparent 100%)",
+                }}
+            />
 
-      {/* Background Decoration */}
-      <img
-        src="/images%209/66030a8f80bb3baa5b0aaa1b_detail-mkt-right.svg"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none absolute right-0 top-0 w-[min(220px,80vw)] opacity-30"
-      />
-
-      <FadeIn>
-        <div
-          className={`relative mx-auto ${
-            centered
-              ? "flex max-w-[1200px] flex-col items-center justify-center text-center"
-              : "grid max-w-[1500px] items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]"
-          } max-[960px]:gap-8 max-[960px]:px-4`}
-        >
-
-          {/* LEFT CONTENT */}
-          <div
-            className={`${
-              centered
-                ? "mx-auto flex max-w-[1100px] flex-col items-center text-center"
-                : "max-[640px]:flex max-[640px]:flex-col max-[640px]:items-center max-[640px]:text-center"
-            }`}
-          >
-
-            {/* HEADING */}
-            <h2
-              className={`font-body font-medium tracking-[-0.02em]
-              ${
-                centered
-                  ? "text-center text-[56px] leading-[1.15]"
-                  : "text-[56px] leading-[73px]"
-              }
+            <FadeIn>
+                <div
+                    className={`relative mx-auto flex max-w-[1200px] flex-col items-center justify-center text-center max-[960px]:gap-8 max-[960px]:px-4`}
+                >
+                    <div className="mx-auto flex max-w-[1100px] flex-col items-center text-center">
+                        <h2
+                            className={`font-body font-medium tracking-[-0.02em]
+              ${centered
+                                    ? "text-center text-[56px] leading-[1.15]"
+                                    : "text-[56px] leading-[73px]"
+                                }
               max-[960px]:text-[46px]
               max-[960px]:leading-[60px]
               max-[640px]:text-[34px]
               max-[640px]:leading-[44px]
               max-[420px]:text-[28px]
               max-[420px]:leading-[36px]`}
-            >
-
-              <span className={`block ${centered ? "md:whitespace-nowrap" : ""}`}>
+                        >
+                            <span className={`block ${centered ? "md:whitespace-nowrap" : ""}`}>
                 Professional website done for you.
               </span>
 
@@ -131,40 +102,26 @@ export default function ProfessionalWebSection({
               Completely zero-risk. Unmatched customer service.
             </p>
 
-            {/* BUTTON */}
-            <a
-              href="/pricing"
-              className={`mt-10 inline-flex rounded-[12px] bg-[#FF5A4E] text-base font-medium text-white shadow-[0_12px_26px_rgba(255,90,78,0.35)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_30px_rgba(255,90,78,0.45)]
-              ${
-                centered
-                  ? "items-center justify-center px-10 py-4"
-                  : "px-10 py-4"
-              }
+
+                        <a
+                            href="/pricing"
+                            className={`mt-10 inline-flex rounded-[12px] bg-[#FF5A4E] text-base font-medium text-white shadow-[0_12px_26px_rgba(255,90,78,0.35)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_30px_rgba(255,90,78,0.45)]
+              ${centered
+                                    ? "items-center justify-center px-10 py-4"
+                                    : "px-10 py-4"
+                                }
               max-[640px]:w-full
               max-[640px]:max-w-[320px]
               max-[640px]:px-12
               max-[640px]:py-5
               max-[640px]:text-lg`}
-            >
-              Get Started
-            </a>
+                        >
+                            Get Started
+                        </a>
+                    </div>
 
-          </div>
-
-          {/* RIGHT IMAGE - ONLY FOR HOME PAGE */}
-          {!centered && (
-            <div className="relative flex min-h-[460px] items-center justify-center lg:min-h-[620px] max-[960px]:min-h-[520px] max-[640px]:hidden">
-              <img
-                src="/images 9/business-growth-website-development.webp"
-                alt="Website examples collage"
-                sizes="(max-width: 991px) 100vw, 980px"
-                className="w-[min(980px,100vw)] max-w-full rotate-[-6deg] drop-shadow-[0_30px_60px_rgba(0,0,0,0.35)]"
-              />
-            </div>
-          )}
-
-        </div>
-      </FadeIn>
-    </section>
-  );
+                </div>
+            </FadeIn>
+        </section>
+    );
 }
