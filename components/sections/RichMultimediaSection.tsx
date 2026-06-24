@@ -196,13 +196,13 @@ export default function RichMultimediaSection() {
       <div className="mx-auto max-w-[1200px]">
         {/* Main Section Heading */}
         <div className="text-center mb-24">
-          <p className="text-[11px] font-bold tracking-[0.25em] text-[#a855f7] uppercase mb-4">
+          <p className="text-[20px] font-bold tracking-[0.25em] text-[#a855f7] uppercase mb-4">
             Add Rich Multimedia
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-[54px] font-bold text-white tracking-tight leading-[1.15]">
             We will make your website{" "}
             <br className="max-sm:inline hidden" />
-            <span className="inline-block bg-[#6d28d9] px-4 py-0.5 rounded-lg text-white font-semibold shadow-[0_4px_20px_rgba(109,40,217,0.35)] max-sm:mt-2">
+            <span class="inline-block border-l-4 border-[#109f7a] bg-[linear-gradient(-50deg,rgba(11,77,58,0)_22%,rgba(16,115,87,0.55))] px-3 py-1 text-white">
               come to life
             </span>
           </h2>

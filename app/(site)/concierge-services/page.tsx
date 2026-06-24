@@ -125,6 +125,60 @@ export default function ConciergeServicesPage() {
         {/* Rich Multimedia Section */}
         <RichMultimediaSection />
 
+        <section className="relative bg-[#05070d] px-4 py-20 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-10 text-center">
+              <p className="mb-3 font-[Poppins] text-sm uppercase tracking-[0.3em] text-white/55">
+                TRACK VISITOR INTERACTIONS
+              </p>
+              <h2
+                className="text-white"
+                style={{
+                  fontFamily: "Poppins, sans-serif",
+                  fontWeight: 500,
+                  color: "rgb(255, 255, 255)",
+                  fontSize: "56px",
+                  lineHeight: "73px",
+                }}
+              >
+                We will{" "}
+                <span
+                  className="inline-block border-l-4 border-[#109f7a] bg-[linear-gradient(-50deg,rgba(11,77,58,0)_22%,rgba(16,115,87,0.55))] px-3 py-1 text-white"
+                  style={{
+                    display: "inline-block",
+                  }}
+                >
+                  integrate tracking
+                </span>
+                <br />
+                tools into your website
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+              {[
+                { name: "AdSense", src: "/concierge services images/logos/adsense.webp" },
+                { name: "Google Analytics", src: "/concierge services images/logos/google%20anlytics.webp" },
+                { name: "Hotjar", src: "/concierge services images/logos/hotjar.webp" },
+                { name: "HTML", src: "/concierge services images/logos/html.webp" },
+                { name: "Vertexia", src: "/concierge services images/logos/logo.webp" },
+                { name: "n8n", src: "/concierge services images/logos/n8n.webp" },
+              ].map((logo) => (
+                <div
+                  key={logo.name}
+                  className="flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm"
+                >
+                  <img
+                    src={logo.src}
+                    alt={logo.name}
+                    className="h-12 w-full max-w-[120px] object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* How It Works Section */}
         <HowItWorksSection showButton />
 
