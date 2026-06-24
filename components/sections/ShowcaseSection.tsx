@@ -2,9 +2,7 @@
 
 
 import { useState, useEffect } from "react";
-import FadeIn from "@/components/animations/FadeIn";
-import { StaggerContainer, StaggerItem } from "@/components/animations/StaggerContainer";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const logos = [
   {
@@ -107,83 +105,84 @@ export default function ShowcaseSection({ hideImages }: { hideImages?: boolean }
             aria-hidden="true"
           />
           {!hideImages && (
-            <img
+            <motion.img
               className="absolute left-1/2 top-[2%] z-[3] w-[28%] -translate-x-1/2"
               src="/pics/65cbb4960b332d68ab229ff0_domain-celestial.svg"
               alt=""
               aria-hidden="true"
+              whileHover={{ y: -5, scale: 1.03 }}
             />
           )}
           {!hideImages && (
             <>
-              <img
+              <motion.img
                 className="absolute left-[2%] top-[11%] z-[4] w-[5.8%]"
                 src="/pics/65cbb49650e79f42be394d5a_editor-left.svg"
                 alt=""
                 aria-hidden="true"
+                animate={{ y: [0, -6, 0] }}
+                transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
               />
-              <img
+              <motion.img
                 className="absolute right-[1.2%] top-[50%] z-[4] w-[5.8%]"
                 src="/pics/65cbb496129dab171442adf9_editor-right.svg"
                 alt=""
                 aria-hidden="true"
+                animate={{ y: [0, 6, 0] }}
+                transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
               />
-              <img
+              <motion.img
                 className="absolute left-[11.5%] top-[18.5%] z-[3] w-[70%]"
                 src="/pics/1.png"
                 alt=""
                 aria-hidden="true"
+                whileHover={{ scale: 1.01 }}
               />
             </>
           )}
           <div className="absolute left-[8.5%] top-[18%] z-[2] h-[75%] w-[42%] overflow-hidden rounded-[12px]">
-            <AnimatePresence initial={false}>
-              {!hideImages && (
-                <motion.img
-                  key={isRedMain ? "red" : "blue"}
-                  initial={{ y: "100%" }}
-                  animate={{ y: 0 }}
-                  exit={{ y: "-100%" }}
-                  transition={{ duration: 0.5, ease: "easeInOut" }}
-                  className="absolute inset-0 h-full w-full object-cover"
-                  style={{ willChange: "transform" }}
-                  src={
-                    isRedMain
-                      ? "/new images/high-performance-business-website.webp"
-                      : "/pics/vertexia-modern-web-development-agency.webp"
-                  }
-                  alt=""
-                  aria-hidden="true"
-                  loading="lazy"
-                />
-              )}
-            </AnimatePresence>
+            {!hideImages && (
+              <img
+                className="absolute inset-0 h-full w-full object-cover"
+                src={
+                  isRedMain
+                    ? "/new images/high-performance-business-website.webp"
+                    : "/pics/vertexia-modern-web-development-agency.webp"
+                }
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+              />
+            )}
           </div>
           {!hideImages && (
             <>
-              <img
+              <motion.img
                 className="absolute left-[30%] top-[30.5%] z-[3] w-[38%]"
                 src="/pics/65cbb4966b74c2eb7ed7bc70_onnor-content.svg"
                 alt=""
                 aria-hidden="true"
+                
               />
-              <img
+              <motion.img
                 className="absolute left-[5.5%] top-[58%] z-[4] w-[18%]"
                 src="/pics/65cbb4962e5467e6fedefd3e_bookings.svg"
                 alt=""
-                aria-hidden="true"
-              />
-              <img
+                aria-hidden="true"/>
+              <motion.img
                 className="absolute left-[33%] top-[88.5%] z-[4] w-[14%]"
                 src="/pics/65cbb496fd59cb86f266ffb0_selll-products.svg"
                 alt=""
                 aria-hidden="true"
+                animate={{ y: [0, -5, 0] }}
+                transition={{ duration: 2.7, repeat: Infinity, ease: "easeInOut" }}
               />
-              <img
+              <motion.img
                 className="absolute right-[5%] top-[28%] z-[4] w-[9%]"
                 src="/pics/65cbb496398c881b16497e7a_publish.svg"
                 alt=""
                 aria-hidden="true"
+                whileHover={{ scale: 1.06, rotate: 2 }}
               />
             </>
           )}
@@ -229,31 +228,23 @@ export default function ShowcaseSection({ hideImages }: { hideImages?: boolean }
   className="relative flex w-full justify-center overflow-hidden min-[961px]:hidden px-2"
   onClick={() => setIsRedMain(!isRedMain)}
 >
-  <AnimatePresence mode="wait">
-    {!hideImages && (
-      <motion.img
-        key={isRedMain ? "mob1" : "mob2"}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.8, ease: "easeInOut" }}
-       className="h-auto w-full max-w-[340px] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.45)]"
-        src={
-          isRedMain
-            ? "/mobile images/advanced-custom-website-development.webp"
-            : "/mobile images/modern-dark-themed-ui-design.webp"
-        }
-        alt="Mobile Showcase"
-        loading="lazy"
-      />
-    )}
-  </AnimatePresence>
+  {!hideImages && (
+    <img
+      className="h-auto w-full max-w-[340px] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.45)]"
+      src={
+        isRedMain
+          ? "/mobile images/advanced-custom-website-development.webp"
+          : "/mobile images/modern-dark-themed-ui-design.webp"
+      }
+      alt="Mobile Showcase"
+      loading="lazy"
+    />
+  )}
 </div>
       </div>
       <div className="relative z-10 bg-[linear-gradient(180deg,rgba(4,6,30,0)_0%,rgba(4,6,30,0.55)_16%,rgba(4,6,30,0.92)_32%,#040404_48%,#040404_100%)] pb-[120px] pt-[140px] max-[640px]:pt-[40px]">
         <div className="mx-auto max-w-[1200px] px-6 text-center">
-          <FadeIn>
-            
+          <div>
             <div className="relative mb-14 overflow-hidden py-6 w-[140%] -ml-[20%]">
               <div className="relative overflow-hidden -mx-0">
                 <motion.div
@@ -285,8 +276,8 @@ export default function ShowcaseSection({ hideImages }: { hideImages?: boolean }
                 <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#040404] to-transparent" />
               </div>
             </div>
-          </FadeIn>
-          <FadeIn delay={0.2}>
+          </div>
+          <div>
             <blockquote className="mx-auto mb-9 max-w-[940px] font-accent text-[30px] font-normal leading-[42px] text-white max-[640px]:text-[22px] max-[640px]:leading-[32px]">
               &ldquo;Vertexia helps businesses grow online with professional web
               development services in Pakistan. Vertexia helps you generate more
@@ -301,9 +292,9 @@ export default function ShowcaseSection({ hideImages }: { hideImages?: boolean }
             <div className="font-serif text-[1.1rem] text-white">
               Trusted Web Development Company in Karachi, Pakistan
             </div>
-          </FadeIn>
+          </div>
           <div className="relative pt-[180px] text-center text-white max-[640px]:pt-[60px]">
-            <FadeIn delay={0.3}>
+            <div>
               <p className="mb-6 text-[0.8rem] uppercase tracking-[0.3em] text-white/60">
                 DID YOU KNOW?
               </p>
@@ -322,10 +313,10 @@ export default function ShowcaseSection({ hideImages }: { hideImages?: boolean }
                   />
                 )}
               </div>
-            </FadeIn>
-            <StaggerContainer className="grid grid-cols-3 items-center justify-items-center gap-10 max-[960px]:grid-cols-2 max-[640px]:hidden">
+            </div>
+            <div className="grid grid-cols-3 items-center justify-items-center gap-10 max-[960px]:grid-cols-2 max-[640px]:hidden">
               {didYouKnowCards.map((card) => (
-                <StaggerItem key={card.src}>
+                <div key={card.src}>
                   {!hideImages && (
                     <img
                       className={`w-full max-w-[600px] drop-shadow-[0_20px_40px_rgba(0,0,0,0.35)] ${card.className}`}
@@ -334,9 +325,9 @@ export default function ShowcaseSection({ hideImages }: { hideImages?: boolean }
                       loading="lazy"
                     />
                   )}
-                </StaggerItem>
+                </div>
               ))}
-            </StaggerContainer>
+            </div>
             {!hideImages && (
               <img
                 className="pointer-events-none absolute bottom-[-200px] left-[18%] w-[160px] opacity-90 max-[960px]:left-[8%] max-[960px]:w-[120px] max-[640px]:hidden"

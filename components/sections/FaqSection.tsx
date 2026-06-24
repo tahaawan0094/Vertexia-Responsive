@@ -1,6 +1,5 @@
 "use client";
 
-import FadeIn from "@/components/animations/FadeIn";
 import { useState } from "react";
 
 const faqs = [
@@ -34,7 +33,7 @@ const faqs = [
         </p>
         <p className="mt-4">
           Explore complete plan details{" "}
-          <a href="#" className="text-[#2d6bff] underline-offset-2 hover:underline">
+          <a href="/pricing" className="text-[#2d6bff] underline-offset-2 hover:underline">
             here
           </a>{" "}
           and save with our yearly or two-year plans. Questions? Speak with us
@@ -43,14 +42,14 @@ const faqs = [
             href="mailto:admin.vertexia@gmail.com"
             className="text-[#2d6bff] underline-offset-2 hover:underline"
           >
-            admin.vertexia@gmail.com
+            reach.vertexia@gmail.com
           </a>
           , or call us at{" "}
           <a
-            href="tel:+12055519730"
+            href="tel:+92-335-2831551"
             className="text-[#2d6bff] underline-offset-2 hover:underline"
           >
-            (205) 551-9730
+            (92) 335-2831551
           </a>
           . Our team is ready to guide you in choosing the best plan.
         </p>
@@ -115,8 +114,7 @@ export default function FaqSection() {
 
   return (
     <section className="bg-[#040404] px-6 pb-32 pt-24 text-white">
-      <FadeIn>
-        <div className="mx-auto grid max-w-[1340px] gap-12 lg:grid-cols-[0.75fr_1.25fr]">
+      <div className="mx-auto grid max-w-[1340px] gap-12 lg:grid-cols-[0.75fr_1.25fr]">
           <div className="max-[640px]:hidden">
             <h2 className="text-[clamp(2.6rem,4.6vw,4.2rem)] font-medium leading-tight">
               Frequently
@@ -140,7 +138,7 @@ export default function FaqSection() {
               return (
                 <div
                   key={item.question}
-                  className="rounded-[24px] border border-white/10 bg-[#151515] px-9 py-6 max-[640px]:px-4 max-[640px]:py-3 text-left text-white transition hover:border-white/20 hover:bg-[#1b1b1b]"
+                  className="rounded-[24px] border border-white/10 bg-[#151515] px-9 py-6 max-[640px]:px-4 max-[640px]:py-3 text-left text-white"
                 >
                   <button
                     type="button"
@@ -184,7 +182,6 @@ export default function FaqSection() {
             </div>
           </div>
         </div>
-      </FadeIn>
     </section>
   );
 }
