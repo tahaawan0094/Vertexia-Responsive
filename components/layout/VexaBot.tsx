@@ -102,7 +102,7 @@ export default function VexaBot() {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 z-[60]">
+    <div className="fixed bottom-5 right-5 z-[70]">
       <AnimatePresence>
         {isOpen && (
           <>
@@ -121,7 +121,7 @@ export default function VexaBot() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ duration: 0.2 }}
-              className="fixed bottom-10 right-10 w-[420px] max-w-[95vw] rounded-[28px] bg-[#0b0f1a] border border-white/10 shadow-2xl overflow-hidden"
+              className="fixed bottom-24 right-5 w-[420px] max-w-[95vw] rounded-[28px] border border-white/10 bg-[#0b0f1a] shadow-2xl overflow-hidden"
             >
               {/* HEADER */}
               <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
@@ -222,25 +222,32 @@ export default function VexaBot() {
 
       {/* FLOAT BUTTON */}
       <button
-        onClick={() => setIsOpen(true)}
-        className="h-14 w-14 rounded-full bg-white shadow-xl flex items-center justify-center hover:scale-105 transition"
+        type="button"
+        onClick={() => setIsOpen((prev) => !prev)}
+        aria-label={isOpen ? "Close chat" : "Open chat"}
+        className="relative z-[80] flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl transition hover:scale-105"
       >
-        {/* SAME ICON */}
-<svg
-  width="20"
-  height="20"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="black"
-  strokeWidth="2"
-  strokeLinecap="round"
-  strokeLinejoin="round"
->
-  <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
-  <circle cx="9" cy="12" r="1" />
-  <circle cx="12" cy="12" r="1" />
-  <circle cx="15" cy="12" r="1" />
-</svg>
+        {isOpen ? (
+          <svg viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        ) : (
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="black"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
+            <circle cx="9" cy="12" r="1" />
+            <circle cx="12" cy="12" r="1" />
+            <circle cx="15" cy="12" r="1" />
+          </svg>
+        )}
       </button>
     </div>
   );
