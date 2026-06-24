@@ -1,6 +1,8 @@
 "use client";
 
 import { StaggerContainer, StaggerItem } from "@/components/animations/StaggerContainer";
+import ShinyText from "@/components/ShinyText";
+
 
 const stars = Array.from({ length: 5 });
 
@@ -23,14 +25,14 @@ export default function HeroSection() {
         <StaggerItem>
           <h1 className="mb-6 text-balance text-[72px] font-medium leading-[94px] text-white max-[960px]:text-[52px] max-[960px]:leading-[64px] max-[640px]:text-[clamp(2.5rem,8vw,3.2rem)] max-[640px]:leading-tight max-[420px]:text-[2rem] max-[420px]:leading-[2.4rem] max-[360px]:text-[1.8rem] max-[360px]:leading-[2.2rem]">
 
-            We&apos;ll build your{" "}
-            <span className="box-decoration-clone inline-block border-l-4 border-[#2a27ff] bg-[linear-gradient(-50deg,rgba(58,41,209,0)_22%,rgba(58,41,209,0.6))] px-1 text-white/80 max-[420px]:border-l-0 max-[420px]:px-0 max-[420px]:bg-transparent max-[420px]:text-white">
-              small business
+            <ShinyText speed={3.5} className="inline">We&apos;ll build your</ShinyText>{" "}
+            <span className="box-decoration-clone inline-block border-l-4 border-[#2a27ff] bg-[linear-gradient(-50deg,rgba(58,41,209,0)_22%,rgba(58,41,209,0.6))] px-1 max-[420px]:border-l-0 max-[420px]:px-0 max-[420px]:bg-transparent">
+              <ShinyText speed={3.5} className="inline" baseColor="rgba(255,255,255,0.7)">small business</ShinyText>
             </span>{" "}
-            <span className="box-decoration-clone inline-block border-l-4 border-[#2a27ff] bg-[linear-gradient(-50deg,rgba(58,41,209,0)_22%,rgba(58,41,209,0.6))] px-1 text-white/80 max-[420px]:border-l-0 max-[420px]:px-0 max-[420px]:bg-transparent max-[420px]:text-white">
-              website
+            <span className="box-decoration-clone inline-block border-l-4 border-[#2a27ff] bg-[linear-gradient(-50deg,rgba(58,41,209,0)_22%,rgba(58,41,209,0.6))] px-1 max-[420px]:border-l-0 max-[420px]:px-0 max-[420px]:bg-transparent">
+              <ShinyText speed={3.5} className="inline" baseColor="rgba(255,255,255,0.7)">website</ShinyText>
             </span>{" "}
-            in 7 days for RS.22,000
+            <ShinyText speed={3.5} className="inline">in 7 days for RS.22,000</ShinyText>
           </h1>
         </StaggerItem>
         <StaggerItem>
