@@ -2,10 +2,75 @@
 
 import { StaggerContainer, StaggerItem } from "@/components/animations/StaggerContainer";
 import ShinyText from "@/components/ShinyText";
+import { CountUp } from "@/components/CountUp";
 import { useState } from "react";
 
 export default function PricingSection() {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly" | "two-year">("monthly");
+
+  const plans = [
+    {
+      name: "Growth",
+      icon: "/Pricing page  images/card-icon-1.svg",
+      badge: "BEST VALUE",
+      accent: "from-[#2563eb] to-[#3b82f6]",
+      featured: false,
+      price: 22500,
+      oldPrice: 180000,
+      savings: "Save Rs 54,000 with yearly billing →",
+      description: "We grow your business online",
+      features: [
+        "Dedicated VIP Growth Team",
+        "Marketing plan for your business",
+        "1-on-1 monthly marketing sessions",
+        "Marketing advice: email, social media, online ads, SEO, reputation, and more",
+        "2,000 words of fresh content created for you",
+      ],
+    },
+    {
+      name: "Plus",
+      icon: "/Pricing page  images/card-icon-2.svg",
+      badge: "MOST POPULAR",
+      accent: "from-[#ff5a4e] to-[#ff7a63]",
+      featured: true,
+      price: 12600,
+      oldPrice: 160000,
+      savings: "Save Rs 105,900 with two yearly billing →",
+      description: "We manage your online presence",
+      features: [
+        "4 email addresses",
+        "Advanced SEO to rank on Google",
+        "Unlimited done-for-you edits",
+        "Integrations to convert visitors into customers",
+        "Promote your products on Google, Facebook & Instagram",
+        "VIP phone support",
+      ],
+    },
+    {
+      name: "Website Launch",
+      icon: "/Pricing page  images/card-icon-3.svg",
+      badge: "LAUNCH READY",
+      accent: "from-[#10b981] to-[#34d399]",
+      featured: false,
+      price: 3640,
+      oldPrice: 160000,
+      savings: "Save Rs 10,320 with yearly billing →",
+      description: "We build launch your website",
+      features: [
+        "Built-for-you website / online store",
+        "Personalized design",
+        "Fast loading to rank on Google",
+        "Ready in 7 days",
+        "Custom domain name or connect one you already have",
+        "Professional email address",
+        "Easy-to-use editor",
+        "0% fees on sales & bookings",
+        "1-to-1 launch & training call",
+        "Secure hosting & SSL certificate",
+        "30-Day Money-back Guarantee",
+      ],
+    },
+  ];
 
   return (
     <section
@@ -103,231 +168,64 @@ export default function PricingSection() {
 
         {/* Pricing Cards */}
         <StaggerItem>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-16 w-full md:max-w-6xl mx-auto">
-            {/* Card 1 - Growth */}
-            <div className="relative bg-white rounded-3xl p-8 max-[640px]:p-4 flex flex-col">
-              <div className="flex flex-col items-center mb-6">
-                <img
-                  src="/Pricing page  images/card-icon-1.svg"
-                  alt="Growth"
-                  className="h-10 w-10 mb-3"
-                />
-                <span className="bg-blue-100 text-blue-600 text-xs font-semibold px-3 py-1 rounded-full">
-                  BEST VALUE
-                </span>
-              </div>
-              <h3 className="text-2xl font-bold text-black mb-2">Growth</h3>
-              <p className="text-gray-600 text-sm mb-6">We grow your business online</p>
-              <div className="mb-2">
-                <span className="text-4xl font-bold text-black">Pkr</span>
-                <span className="text-4xl font-bold text-black ml-1">22,500</span>
-                <span className="text-gray-600 ml-2">/Mo</span>
-              </div>
-              <p className="text-gray-500 text-xs mb-2">billed annually +Rs 22,500</p>
-              <p className="text-red-600 text-sm mb-6 line-through">Pkr 180,000</p>
-              <button className="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 rounded-lg mb-4 transition">
-                Contact Us
-              </button>
-              <p className="text-gray-600 text-xs mb-6">Save Rs 54,000 with yearly billing →</p>
-              <div className="border-t pt-4 text-left">
-                <p className="text-gray-600 text-xs mb-3 font-semibold">Everything in Plus, and:</p>
-                <div className="space-y-3">
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">Dedicated VIP Growth Team</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">Marketing plan for your business</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">1-on-1 monthly marketing sessions</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">Marketing advice: email, social media, online ads, SEO, reputation, and more</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">2,000 words of fresh content created for you</span>
-                  </div>
+          <div className="mx-auto mt-8 grid w-full grid-cols-1 gap-4 sm:mt-16 sm:gap-6 md:max-w-6xl md:grid-cols-3">
+            {plans.map((plan) => (
+              <div
+                key={plan.name}
+                className={`relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-white/10 bg-white/95 ${plan.name === "Growth" ? "p-8 min-h-[700px]" : "p-8"} text-left shadow-[0_16px_50px_rgba(0,0,0,0.18)] backdrop-blur-sm transition-all max-[640px]:p-4 ${
+                  plan.featured
+                    ? "scale-[1.02] border-[#ff5a4e]/40 bg-gradient-to-br from-white via-white to-[#fff7f5] ring-2 ring-[#ff5a4e]/30"
+                    : "hover:bg-white"
+                }`}
+              >
+                <div className={`absolute left-1/2 top-0 -translate-x-1/2 rounded-b-2xl px-4 py-2 text-[10px] font-black uppercase tracking-[0.25em] shadow-lg ${plan.featured ? "bg-[#ff5a4e] text-white" : "bg-slate-900 text-white"}`}>
+                  {plan.badge}
                 </div>
-              </div>
-            </div>
 
-            {/* Card 2 - Plus */}
-            <div className="relative bg-white rounded-3xl p-8 max-[640px]:p-4 flex flex-col">
-              <div className="flex justify-center mb-6">
-                <span className="bg-blue-100 text-blue-600 text-xs font-semibold px-3 py-1 rounded-full">
-                  MOST POPULAR
-                </span>
-              </div>
-              <img
-                src="/Pricing page  images/card-icon-2.svg"
-                alt="Plus"
-                className="h-10 w-10 mx-auto mb-3"
-              />
-              <h3 className="text-2xl font-bold text-black mb-2 text-center">Plus</h3>
-              <p className="text-gray-600 text-sm mb-6 text-center">We manage your online presence</p>
-              <div className="mb-2 text-center">
-                <span className="text-4xl font-bold text-black">Pkr</span>
-                <span className="text-4xl font-bold text-black ml-1">12,600</span>
-                <span className="text-gray-600 ml-2">/Mo</span>
-              </div>
-              <p className="text-gray-500 text-xs mb-2 text-center">billed annually</p>
-              <p className="text-red-600 text-sm mb-6 line-through text-center">Pkr 160,000 +Rs 22,500 setup fee</p>
-              <button className="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 rounded-lg mb-4 transition">
-                Contact Us
-              </button>
-              <p className="text-gray-600 text-xs mb-6 text-center">Save Rs 105,900 with two yearly billing →</p>
-              <div className="border-t pt-4 text-left">
-                <p className="text-gray-600 text-xs mb-3 font-semibold">Everything in Launch, and:</p>
-                <div className="space-y-3">
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">4 email addresses</span>
+                <div className={plan.name === "Growth" ? "mb-2 flex flex-col items-center text-center" : "mb-6 flex flex-col items-center text-center"}>
+                  <div className={`mb-0 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${plan.accent} p-3 text-white shadow-lg`}>
+                    <img src={plan.icon} alt={plan.name} className="h-8 w-8" />
                   </div>
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">Advanced SEO to rank on Google</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">Unlimited done-for-you edits</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">Integrations to convert visitors into customers: 3rd party integrations such as live chat, advanced designs, load forms, multimedia &more</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">Promote your products on Google, Facebook &Instagram</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">VIP phone support</span>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            {/* Card 3 - Website Launch */}
-            <div className="relative bg-white rounded-3xl p-8 max-[640px]:p-4 flex flex-col">
-              <div className="flex flex-col items-center mb-6">
-                <img
-                  src="/Pricing page  images/card-icon-3.svg"
-                  alt="Website Launch"
-                  className="h-10 w-10 mb-3"
-                />
-              </div>
-              <h3 className="text-2xl font-bold text-black mb-2 text-center">Website Launch</h3>
-              <p className="text-gray-600 text-sm mb-6 text-center">We build launch your website</p>
-              <div className="mb-2 text-center">
-                <span className="text-4xl font-bold text-black">Pkr</span>
-                <span className="text-4xl font-bold text-black ml-1">3,640</span>
-                <span className="text-gray-600 ml-2">/Mo</span>
-              </div>
-              <p className="text-gray-500 text-xs mb-2 text-center">billed annually</p>
-              <p className="text-red-600 text-sm mb-6 line-through text-center">Pkr 160,000 +Rs 22,500 setup fee</p>
-              <button className="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 rounded-lg mb-4 transition">
-                Contact Us
-              </button>
-              <p className="text-gray-600 text-xs mb-6 text-center">Save Rs 10,320 with yearly billing →</p>
-              <div className="border-t pt-4 text-left">
-                <p className="text-gray-600 text-xs mb-3 font-semibold">Included in all plans:</p>
-                <div className="space-y-3">
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">Built-for-you website / online store</span>
+                  <div className="space-y-[-4px]">
+                    <h3 className="text-2xl font-bold text-black">{plan.name}</h3>
+                    <p className="text-sm text-gray-600">{plan.description}</p>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">Personalized design</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">Fast loading to rank on Google</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">Ready in 7 days</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">Custom domain name or connect one you already have</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">Professional email address</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">Easy-to-use editor</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">0% fees on sales &bookings</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">1-to-1 launch &training call</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">Secure hosting &SSL certificate</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <svg className="h-5 w-5 flex-shrink-0 mt-0.5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700 text-sm">30-Day Money-back Guarantee</span>
+                  {plan.name === "Growth" && (
+                    <img src="/logos/header-logo.png" alt="Vertexia logo" className="mt-0 h-7 w-auto" />
+                  )}
+                </div>
+
+                <div className="mb-3 flex items-end justify-center gap-2 text-center">
+                  <span className="text-4xl font-black text-black">Pkr</span>
+                  <CountUp value={plan.price} duration={1.4} className="text-4xl font-black leading-none text-black" />
+                  <span className="mb-1 text-sm font-semibold text-gray-500">/Mo</span>
+                </div>
+                <p className="mb-1 text-center text-xs text-gray-500">billed annually</p>
+                <p className="mb-3 text-center text-sm text-red-600 line-through">Pkr {plan.oldPrice.toLocaleString()}</p>
+
+                <div className={plan.name === "Growth" ? "mb-4" : "mb-3"}>
+                  <button className={`w-full rounded-2xl px-4 py-3 font-bold text-white transition-all hover:-translate-y-0.5 ${plan.featured ? "bg-[#ff5a4e] hover:bg-[#ff6d59]" : "bg-[#0066FF] hover:bg-[#0057d9]"}`}>
+                    Contact Us
+                  </button>
+                </div>
+                <p className={plan.name === "Growth" ? "mb-6 text-center text-xs text-gray-600" : "mb-4 text-center text-xs text-gray-600"}>{plan.savings}</p>
+
+                <div className="mt-2 border-t border-gray-200 pt-3 text-left">
+                  <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-gray-600">Included features</p>
+                  <div className="space-y-3">
+                    {plan.features.map((feature) => (
+                      <div key={feature} className="flex items-start gap-2">
+                        <svg className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-sm text-gray-700">{feature}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </StaggerItem>
       </StaggerContainer>
