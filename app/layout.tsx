@@ -1,3 +1,4 @@
+import Script from "next/script"; 
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Montserrat, Mulish, Poppins } from "next/font/google";
@@ -47,6 +48,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`${poppins.variable} ${mulish.variable} ${montserrat.variable} min-h-screen overflow-x-hidden bg-[#040404] font-body text-white antialiased`}
       >
+        <Script
+  src="https://www.googletagmanager.com/gtag/js?id=G-1R8JGMKESY"
+  strategy="afterInteractive"
+/>
+<Script id="google-analytics" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1R8JGMKESY');
+  `}
+</Script>
         <Schema />
         {children}
       </body>
