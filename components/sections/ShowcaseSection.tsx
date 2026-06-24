@@ -68,6 +68,8 @@ const didYouKnowCards = [
   }
 ];
 
+const marqueeLogos = [...logos, ...logos];
+
 export default function ShowcaseSection({ hideImages }: { hideImages?: boolean }) {
   const [isRedMain, setIsRedMain] = useState(true);
 
@@ -250,22 +252,37 @@ export default function ShowcaseSection({ hideImages }: { hideImages?: boolean }
       <div className="relative z-10 bg-[linear-gradient(180deg,rgba(4,6,30,0)_0%,rgba(4,6,30,0.55)_16%,rgba(4,6,30,0.92)_32%,#040404_48%,#040404_100%)] pb-[120px] pt-[140px] max-[640px]:pt-[40px]">
         <div className="mx-auto max-w-[1200px] px-6 text-center">
           <FadeIn>
-            <div
-              className="mb-16 flex min-h-[104px] flex-wrap items-center justify-center gap-x-12 gap-y-8 max-[640px]:mb-8 max-[640px]:gap-x-6 max-[640px]:gap-y-6"
-              aria-label="Featured in"
-            >
-              {logos.map((logo) => (
-                <span key={logo.name} className={`${logo.className} flex items-center justify-center`}>
-                  {!hideImages && (
-                    <img
-                      className="h-8 max-h-[26px] w-auto object-contain max-[640px]:max-h-[20px]"
-                      src={logo.src}
-                      alt={logo.name}
-                      loading="lazy"
-                    />
-                  )}
-                </span>
-              ))}
+            
+            <div className="relative mb-14 overflow-hidden py-6 w-[140%] -ml-[20%]">
+              <div className="relative overflow-hidden -mx-0">
+                <motion.div
+                  className="flex w-max items-center gap-4 px-0 sm:gap-6"
+                  animate={{ x: ["0%", "-50%"] }}
+                  transition={{ duration: 20, ease: "linear", repeat: Infinity, repeatType: "loop" }}
+                >
+                  {marqueeLogos.map((logo, index) => (
+                    <div
+                      key={`${logo.name}-${index}`}
+                      className="flex h-20 min-w-[180px] items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-6 shadow-[0_10px_30px_rgba(0,0,0,0.2)]"
+                    >
+                      {!hideImages ? (
+                        <img
+                          className="h-8 max-h-[26px] w-auto object-contain max-[640px]:max-h-[20px]"
+                          src={logo.src}
+                          alt={logo.name}
+                          loading="lazy"
+                        />
+                      ) : (
+                        <span className="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">
+                          {logo.name}
+                        </span>
+                      )}
+                    </div>
+                  ))}
+                </motion.div>
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#040404] to-transparent" />
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#040404] to-transparent" />
+              </div>
             </div>
           </FadeIn>
           <FadeIn delay={0.2}>
