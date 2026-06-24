@@ -1,4 +1,3 @@
-// app/(site)/concierge-services/ConciergeClientPage.tsx
 "use client";
 
 import Link from "next/link";
@@ -135,17 +134,14 @@ const testimonials = [
   },
 ];
 
-export default function ConciergeClientPage() {
+export default function ConciergePageContent() {
   return (
     <PageTransition>
       <main className="site overflow-x-hidden">
-        {/* Hero & Layered Mockup */}
         <ConciergeHeroSection />
 
-        {/* Unlimited Website Edits Section */}
         <section className="px-4 py-24 sm:px-6 lg:px-8 bg-[#040404] relative z-10">
           <div className="mx-auto max-w-[1200px]">
-            {/* Heading */}
             <div className="text-center mb-6">
               <h2 className="text-[52px] leading-[1.15] font-bold text-white mb-6 max-[640px]:text-[34px] max-[640px]:leading-tight">
                 Unlimited{" "}
@@ -162,9 +158,7 @@ export default function ConciergeClientPage() {
               </p>
             </div>
 
-            {/* Image Cards Row */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14">
-              {/* Card 1 */}
               <div className="flex flex-col items-center gap-4 group">
                 <div className="w-full overflow-hidden rounded-[20px] shadow-[0_20px_60px_rgba(0,0,0,0.5)] transition-transform duration-300 group-hover:-translate-y-1">
                   <img
@@ -176,7 +170,6 @@ export default function ConciergeClientPage() {
                 <p className="text-white/80 text-[15px] font-medium tracking-wide">Enhance your content</p>
               </div>
 
-              {/* Card 2 */}
               <div className="flex flex-col items-center gap-4 group">
                 <div className="w-full overflow-hidden rounded-[20px] shadow-[0_20px_60px_rgba(0,0,0,0.5)] transition-transform duration-300 group-hover:-translate-y-1">
                   <img
@@ -188,7 +181,6 @@ export default function ConciergeClientPage() {
                 <p className="text-white/80 text-[15px] font-medium tracking-wide">Refresh your design</p>
               </div>
 
-              {/* Card 3 */}
               <div className="flex flex-col items-center gap-4 group">
                 <div className="w-full overflow-hidden rounded-[20px] shadow-[0_20px_60px_rgba(0,0,0,0.5)] transition-transform duration-300 group-hover:-translate-y-1">
                   <img
@@ -203,7 +195,6 @@ export default function ConciergeClientPage() {
           </div>
         </section>
 
-        {/* Magic Service Banner Section */}
         <section className="bg-[#040404] py-12 relative z-10">
           <div className="w-full bg-gradient-to-r from-[#06281e] via-[#0b4d3a] to-[#06281e] py-8 text-center border-y border-white/5">
             <div className="mx-auto max-w-[1200px] px-4">
@@ -217,12 +208,9 @@ export default function ConciergeClientPage() {
           </div>
         </section>
 
-        {/* Rich Multimedia Section */}
         <RichMultimediaSection />
 
-        {/* Track Interactions Section - Now Edge to Edge */}
         <section className="relative bg-[#040404] py-20 w-full overflow-hidden">
-          {/* Centered Heading Layout */}
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-10 text-center">
             <p className="mb-3 font-[Poppins] text-sm uppercase tracking-[0.3em] text-white/55">
               TRACK VISITOR INTERACTIONS
@@ -240,9 +228,7 @@ export default function ConciergeClientPage() {
               We will{" "}
               <span
                 className="inline-block border-l-4 border-[#109f7a] bg-[linear-gradient(-50deg,rgba(11,77,58,0)_22%,rgba(16,115,87,0.55))] px-3 py-1 text-white"
-                style={{
-                  display: "inline-block",
-                }}
+                style={{ display: "inline-block" }}
               >
                 integrate tracking
               </span>
@@ -251,16 +237,11 @@ export default function ConciergeClientPage() {
             </h2>
           </div>
 
-          {/* Full Width Ticker Area */}
           <div className="w-full overflow-hidden bg-[#040404]">
             <motion.div
               className="flex w-max gap-6 py-2"
               animate={{ x: [0, -1800] }}
-              transition={{
-                duration: 18,
-                repeat: Infinity,
-                ease: "linear",
-              }}
+              transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
             >
               {[
                 [
@@ -300,13 +281,11 @@ export default function ConciergeClientPage() {
           </div>
         </section>
 
-        {/* Testimonials Section - Fully Extended to Edges */}
-        <section className="relative w-full overflow-hidden bg-[#040404] py-24">
+        <section className="relative w-full overflow-hidden bg-[#FFFFFF] py-24">
           <div className="w-full">
-            <div className="mx-auto mb-14 max-w-3xl text-center px-4 sm:px-6 lg:px-8">
-
+            <div className="mx-auto mb-14 max-w-3xl px-4 text-center sm:px-6 lg:px-8">
               <h3
-                className="text-white"
+                className="text-[#0F172A]"
                 style={{
                   fontFamily: "Poppins, sans-serif",
                   fontWeight: 600,
@@ -314,23 +293,14 @@ export default function ConciergeClientPage() {
                   lineHeight: "1.15",
                 }}
               >
-                A wall of <p className="inline-block border-l-4 border-[#109f7a] bg-[linear-gradient(-50deg,rgba(11,77,58,0)_22%,rgba(16,115,87,0.55))] px-3 py-1 text-white"> love for our </p><br />Concierge Service </h3>
-              <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-white sm:text-lg">
+                A wall of <span className="inline-block border-l-4 border-[#109f7a] bg-[linear-gradient(-50deg,rgba(11,77,58,0)_22%,rgba(16,115,87,0.55))] px-3 py-1 text-[#0F172A]"> love for our </span><br />Concierge Service
+              </h3>
+              <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-[#475569] sm:text-lg">
                 Customers achieve more with our team’s help.
-
-
               </p>
-              <div className="mt-6 flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-6">
-                <div className="text-left">
-                </div>
-                <div className="text-left">
-                </div>
-              </div>
             </div>
 
-            {/* Container now fully fluid across edges */}
             <ThreeDScrollTriggerContainer className="w-full space-y-4 md:space-y-5">
-              {/* Row 1 */}
               <ThreeDScrollTriggerRow direction={1} baseVelocity={3} className="py-2">
                 {testimonials.slice(0, 5).map((testimonial, index) => (
                   <div key={`${testimonial.name}-${index}`} className="mr-4 md:mr-5 shrink-0">
@@ -358,7 +328,6 @@ export default function ConciergeClientPage() {
                 ))}
               </ThreeDScrollTriggerRow>
 
-              {/* Row 2 */}
               <ThreeDScrollTriggerRow direction={-1} baseVelocity={4} className="py-2">
                 {testimonials.slice(5, 10).map((testimonial, index) => (
                   <div key={`${testimonial.name}-${index}`} className="mr-4 md:mr-5 shrink-0">
@@ -386,7 +355,6 @@ export default function ConciergeClientPage() {
                 ))}
               </ThreeDScrollTriggerRow>
 
-              {/* Row 3 */}
               <ThreeDScrollTriggerRow direction={1} baseVelocity={5} className="py-2">
                 {testimonials.slice(10, 15).map((testimonial, index) => (
                   <div key={`${testimonial.name}-${index}`} className="mr-4 md:mr-5 shrink-0">
@@ -413,14 +381,12 @@ export default function ConciergeClientPage() {
                   </div>
                 ))}
               </ThreeDScrollTriggerRow>
-
             </ThreeDScrollTriggerContainer>
           </div>
         </section>
 
         <ProfessionalWebSectionCopy />
 
-        {/* Service Resources Section */}
         <section className="px-4 py-20 sm:px-6 lg:px-8 bg-[#09090c]">
           <div className="mx-auto max-w-4xl">
             <div className="text-center mb-12">
@@ -435,10 +401,7 @@ export default function ConciergeClientPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-[#121217] rounded-2xl p-6 border border-white/5 hover:border-white/10 hover:shadow-lg transition-all duration-300">
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  <Link
-                    href="/get-custom-website"
-                    className="text-blue-400 hover:text-blue-300 transition-colors"
-                  >
+                  <Link href="/get-custom-website" className="text-blue-400 hover:text-blue-300 transition-colors">
                     Get Custom Website &rarr;
                   </Link>
                 </h3>
@@ -449,10 +412,7 @@ export default function ConciergeClientPage() {
 
               <div className="bg-[#121217] rounded-2xl p-6 border border-white/5 hover:border-white/10 hover:shadow-lg transition-all duration-300">
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  <Link
-                    href="/get-wordpress-website"
-                    className="text-blue-400 hover:text-blue-300 transition-colors"
-                  >
+                  <Link href="/get-wordpress-website" className="text-blue-400 hover:text-blue-300 transition-colors">
                     Get WordPress Website &rarr;
                   </Link>
                 </h3>
@@ -463,10 +423,7 @@ export default function ConciergeClientPage() {
 
               <div className="bg-[#121217] rounded-2xl p-6 border border-white/5 hover:border-white/10 hover:shadow-lg transition-all duration-300">
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  <Link
-                    href="/pricing"
-                    className="text-blue-400 hover:text-blue-300 transition-colors"
-                  >
+                  <Link href="/pricing" className="text-blue-400 hover:text-blue-300 transition-colors">
                     View Our Pricing &rarr;
                   </Link>
                 </h3>
@@ -477,15 +434,12 @@ export default function ConciergeClientPage() {
 
               <div className="bg-[#121217] rounded-2xl p-6 border border-white/5 hover:border-white/10 hover:shadow-lg transition-all duration-300">
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  <Link
-                    href="/faqs"
-                    className="text-blue-400 hover:text-blue-300 transition-colors"
-                  >
+                  <Link href="/faqs" className="text-blue-400 hover:text-blue-300 transition-colors">
                     FAQs &rarr;
                   </Link>
                 </h3>
                 <p className="text-white/60 text-sm">
-                  Transparent, affordable pricing plans tailored for small business launch, support, and growth packages.
+                  Get detailed answers to common inquiries about our platform capabilities, onboarding questionnaires, and support.
                 </p>
               </div>
             </div>
