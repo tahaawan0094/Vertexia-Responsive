@@ -174,15 +174,13 @@ export default function ShowcaseSection({ hideImages }: { hideImages?: boolean }
                 src="/pics/65cbb496fd59cb86f266ffb0_selll-products.svg"
                 alt=""
                 aria-hidden="true"
-                animate={{ y: [0, -5, 0] }}
-                transition={{ duration: 2.7, repeat: Infinity, ease: "easeInOut" }}
+               
               />
               <motion.img
                 className="absolute right-[5%] top-[28%] z-[4] w-[9%]"
                 src="/pics/65cbb496398c881b16497e7a_publish.svg"
                 alt=""
-                aria-hidden="true"
-                whileHover={{ scale: 1.06, rotate: 2 }}
+             
               />
             </>
           )}

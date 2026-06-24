@@ -175,9 +175,9 @@ export default function Navbar() {
         <div className="flex items-center flex-shrink-0">
           <a href="/" className="flex items-center gap-3" aria-label="Vertexia">
             <img
-              src="/new-header-logo.png"
+              src="/vertexia-navbar-logo.svg"
               alt="Vertexia"
-              className="block h-10 sm:h-12 lg:h-16 w-auto"
+              className="block h-10 sm:h-12 lg:h-7 w-auto"
             />
           </a>
         </div>
