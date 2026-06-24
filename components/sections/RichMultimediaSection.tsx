@@ -202,7 +202,7 @@ export default function RichMultimediaSection() {
           <h2 className="text-4xl md:text-5xl lg:text-[54px] font-bold text-white tracking-tight leading-[1.15]">
             We will make your website{" "}
             <br className="max-sm:inline hidden" />
-            <span class="inline-block border-l-4 border-[#109f7a] bg-[linear-gradient(-50deg,rgba(11,77,58,0)_22%,rgba(16,115,87,0.55))] px-3 py-1 text-white">
+            <span className="inline-block border-l-4 border-[#109f7a] bg-[linear-gradient(-50deg,rgba(11,77,58,0)_22%,rgba(16,115,87,0.55))] px-3 py-1 text-white">
               come to life
             </span>
           </h2>

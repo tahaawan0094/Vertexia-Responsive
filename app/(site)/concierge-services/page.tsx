@@ -1,4 +1,6 @@
-import type { Metadata } from "next";
+// app/(site)/concierge-services/ConciergeClientPage.tsx
+"use client";
+
 import Link from "next/link";
 import ConciergeHeroSection from "@/components/sections/ConciergeHeroSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
@@ -7,43 +9,12 @@ import ProfessionalWebSection from "@/components/sections/ProfessionalWebSection
 import FooterLinksSection from "@/components/sections/FooterLinksSection";
 import PageTransition from "@/components/animations/PageTransition";
 import RichMultimediaSection from "@/components/sections/RichMultimediaSection";
+import { motion } from "framer-motion";
 
-
-export const metadata: Metadata = {
-  title: "Concierge Services | Vertexia - On-Demand Professional Website Edits",
-  description:
-    "VIP on-demand website edits and maintenance services by Vertexia. We handle layout modifications, content updates, product updates, and search optimization for you.",
-  keywords: [
-    "website concierge service",
-    "on-demand website edits",
-    "website maintenance",
-    "professional website update",
-    "custom website edits",
-    "Vertexia concierge",
-    "manage website",
-  ],
-  alternates: {
-    canonical: "https://vertexiaio.vercel.app/concierge-services",
-  },
-  openGraph: {
-    title: "Concierge Services | Vertexia - On-Demand Professional Website Edits",
-    description:
-      "VIP on-demand website edits and maintenance services by Vertexia. We handle layout modifications, content updates, product updates, and search optimization for you.",
-    url: "https://vertexiaio.vercel.app/concierge-services",
-    type: "website",
-    siteName: "Vertexia",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-  },
-};
-
-export default function ConciergeServicesPage() {
+export default function ConciergeClientPage() {
   return (
     <PageTransition>
-      <main className="site">
+      <main className="site overflow-x-hidden">
         {/* Hero & Layered Mockup */}
         <ConciergeHeroSection />
 
@@ -125,60 +96,83 @@ export default function ConciergeServicesPage() {
         {/* Rich Multimedia Section */}
         <RichMultimediaSection />
 
-        <section className="relative bg-[#05070d] px-4 py-20 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-7xl">
-            <div className="mb-10 text-center">
-              <p className="mb-3 font-[Poppins] text-sm uppercase tracking-[0.3em] text-white/55">
-                TRACK VISITOR INTERACTIONS
-              </p>
-              <h2
-                className="text-white"
+        {/* Track Interactions Section - Now Edge to Edge */}
+        <section className="relative bg-[#040404] py-20 w-full overflow-hidden">
+          {/* Centered Heading Layout */}
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-10 text-center">
+            <p className="mb-3 font-[Poppins] text-sm uppercase tracking-[0.3em] text-white/55">
+              TRACK VISITOR INTERACTIONS
+            </p>
+            <h2
+              className="text-white"
+              style={{
+                fontFamily: "Poppins, sans-serif",
+                fontWeight: 500,
+                color: "rgb(255, 255, 255)",
+                fontSize: "56px",
+                lineHeight: "73px",
+              }}
+            >
+              We will{" "}
+              <span
+                className="inline-block border-l-4 border-[#109f7a] bg-[linear-gradient(-50deg,rgba(11,77,58,0)_22%,rgba(16,115,87,0.55))] px-3 py-1 text-white"
                 style={{
-                  fontFamily: "Poppins, sans-serif",
-                  fontWeight: 500,
-                  color: "rgb(255, 255, 255)",
-                  fontSize: "56px",
-                  lineHeight: "73px",
+                  display: "inline-block",
                 }}
               >
-                We will{" "}
-                <span
-                  className="inline-block border-l-4 border-[#109f7a] bg-[linear-gradient(-50deg,rgba(11,77,58,0)_22%,rgba(16,115,87,0.55))] px-3 py-1 text-white"
-                  style={{
-                    display: "inline-block",
-                  }}
-                >
-                  integrate tracking
-                </span>
-                <br />
-                tools into your website
-              </h2>
-            </div>
+                integrate tracking
+              </span>
+              <br />
+              tools into your website
+            </h2>
+          </div>
 
-            <div className="grid grid-cols-2 gap-2   sm:grid-cols-3 lg:grid-cols-6">
+          {/* Full Width Ticker Area */}
+          <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] +mr-[50vw] overflow-hidden bg-[#040404]">
+            <motion.div
+              className="flex w-max gap-6 py-2"
+              animate={{ x: [0, -1800] }}
+              transition={{
+                duration: 18,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            >
               {[
-                { name: "Google AdSense", src: "/concierge services images/logos/adsense.webp" },
-                { name: "Google Analytics", src: "/concierge services images/logos/google%20anlytics.webp" },
-                { name: "Hotjar", src: "/concierge services images/logos/hotjar.webp" },
-                { name: "Facebook Pixel", src: "/concierge services images/logos/html.webp" },
-                { name: "Google Tag Manager", src: "/concierge services images/logos/logo.webp" },
-                { name: "HubSpot Tracking", src: "/concierge services images/logos/n8n.webp" },
-              ].map((logo) => (
-                <div
-                  key={logo.name}
-                  className="flex flex-col items-center justify-center gap-3 p-2"
-                >
-                  <img
-                    src={logo.src}
-                    alt={logo.name}
-                    className="h-36 w-full max-w-[320px] object-contain"
-                  />
-                  <p className="text-center text-sm font-medium uppercase tracking-[0.2em] text-white/70">
-                    {logo.name}
-                  </p>
-                </div>
-              ))}
-            </div>
+                [
+                  { name: "Google AdSense", src: "/concierge services images/logos/adsense.webp" },
+                  { name: "Google Analytics", src: "/concierge services images/logos/google%20anlytics.webp" },
+                  { name: "Hotjar", src: "/concierge services images/logos/hotjar.webp" },
+                  { name: "Facebook Pixel", src: "/concierge services images/logos/html.webp" },
+                  { name: "Google Tag Manager", src: "/concierge services images/logos/logo.webp" },
+                  { name: "HubSpot Tracking", src: "/concierge services images/logos/n8n.webp" },
+                ],
+                [
+                  { name: "Google AdSense", src: "/concierge services images/logos/adsense.webp" },
+                  { name: "Google Analytics", src: "/concierge services images/logos/google%20anlytics.webp" },
+                  { name: "Hotjar", src: "/concierge services images/logos/hotjar.webp" },
+                  { name: "Facebook Pixel", src: "/concierge services images/logos/html.webp" },
+                  { name: "Google Tag Manager", src: "/concierge services images/logos/logo.webp" },
+                  { name: "HubSpot Tracking", src: "/concierge services images/logos/n8n.webp" },
+                ],
+              ]
+                .flat()
+                .map((logo, index) => (
+                  <div
+                    key={`${logo.name}-${index}`}
+                    className="flex min-w-[220px] flex-col items-center justify-center gap-3 rounded-2xl p-4"
+                  >
+                    <img
+                      src={logo.src}
+                      alt={logo.name}
+                      className="h-24 w-full max-w-[220px] object-contain"
+                    />
+                    <p className="text-center text-sm font-medium uppercase tracking-[0.2em] text-white/70">
+                      {logo.name}
+                    </p>
+                  </div>
+                ))}
+            </motion.div>
           </div>
         </section>
 
