@@ -3,10 +3,6 @@
 
 import Link from "next/link";
 import ConciergeHeroSection from "@/components/sections/ConciergeHeroSection";
-import HowItWorksSection from "@/components/sections/HowItWorksSection";
-import FaqSection from "@/components/sections/FaqSection";
-import ProfessionalWebSection from "@/components/sections/ProfessionalWebSection";
-import FooterLinksSection from "@/components/sections/FooterLinksSection";
 import PageTransition from "@/components/animations/PageTransition";
 import RichMultimediaSection from "@/components/sections/RichMultimediaSection";
 import {
@@ -304,12 +300,12 @@ export default function ConciergeClientPage() {
         </section>
 
         {/* Testimonials Section - Fully Extended to Edges */}
-        <section className="relative w-full overflow-hidden bg-[#FFFFFF] py-24">
+        <section className="relative w-full overflow-hidden bg-[#040404] py-24">
           <div className="w-full">
             <div className="mx-auto mb-14 max-w-3xl text-center px-4 sm:px-6 lg:px-8">
 
               <h3
-                className="text-[#0F172A]"
+                className="text-white"
                 style={{
                   fontFamily: "Poppins, sans-serif",
                   fontWeight: 600,
@@ -317,8 +313,8 @@ export default function ConciergeClientPage() {
                   lineHeight: "1.15",
                 }}
               >
-                A wall of <p className="inline-block border-l-4 border-[#109f7a] bg-[linear-gradient(-50deg,rgba(11,77,58,0)_22%,rgba(16,115,87,0.55))] px-3 py-1 text-[#0F172A]"> love for our </p><br />Concierge Service </h3>
-              <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-[#475569] sm:text-lg">
+                A wall of <p className="inline-block border-l-4 border-[#109f7a] bg-[linear-gradient(-50deg,rgba(11,77,58,0)_22%,rgba(16,115,87,0.55))] px-3 py-1 text-white"> love for our </p><br />Concierge Service </h3>
+              <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-white sm:text-lg">
                 Customers achieve more with our team’s help.
 
 
@@ -417,45 +413,11 @@ export default function ConciergeClientPage() {
                 ))}
               </ThreeDScrollTriggerRow>
 
-              {/* Row 4 */}
-              <ThreeDScrollTriggerRow direction={-1} baseVelocity={6} className="py-2">
-                {testimonials.slice(15, 20).map((testimonial, index) => (
-                  <div key={`${testimonial.name}-${index}`} className="mr-4 md:mr-5 shrink-0">
-                    <article className="flex h-[260px] w-[280px] flex-col rounded-[20px] border border-[#E5E7EB] bg-white p-6 shadow-[0_10px_30px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(15,23,42,0.12)] md:w-[300px]">
-                      <div className="mb-4 flex items-center gap-3">
-                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#ECFDF5] text-sm font-semibold text-[#047857]">
-                          {testimonial.name.split(" ").map((part) => part[0]).slice(0, 2).join("")}
-                        </div>
-                        <div className="whitespace-normal">
-                          <div className="flex items-center gap-2 flex-wrap">
-                            <h4 className="text-base font-semibold text-[#0F172A]">{testimonial.name}</h4>
-                            <span className="inline-flex items-center rounded-full bg-[#ECFDF5] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#047857]">
-                              Verified
-                            </span>
-                          </div>
-                          <p className="text-sm text-[#64748B]">{testimonial.role}</p>
-                        </div>
-                      </div>
-                      <div className="mb-4 text-lg text-[#F59E0B]">★★★★★</div>
-                      <p className="flex-1 text-[14px] leading-7 font-medium tracking-[-0.01em] text-[#334155] sm:text-[15px] whitespace-normal">
-                        “{testimonial.quote}”
-                      </p>
-                    </article>
-                  </div>
-                ))}
-              </ThreeDScrollTriggerRow>
             </ThreeDScrollTriggerContainer>
           </div>
         </section>
 
-        {/* How It Works Section */}
-        <HowItWorksSection showButton />
-
-        {/* FAQs */}
-        <FaqSection />
-
-        {/* Center Prompt */}
-        <ProfessionalWebSection centered />
+       
 
         {/* Service Resources Section */}
         <section className="px-4 py-20 sm:px-6 lg:px-8 bg-[#09090c]">
