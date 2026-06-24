@@ -155,24 +155,27 @@ export default function ConciergeServicesPage() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+            <div className="grid grid-cols-2 gap-2   sm:grid-cols-3 lg:grid-cols-6">
               {[
-                { name: "AdSense", src: "/concierge services images/logos/adsense.webp" },
+                { name: "Google AdSense", src: "/concierge services images/logos/adsense.webp" },
                 { name: "Google Analytics", src: "/concierge services images/logos/google%20anlytics.webp" },
                 { name: "Hotjar", src: "/concierge services images/logos/hotjar.webp" },
-                { name: "HTML", src: "/concierge services images/logos/html.webp" },
-                { name: "Vertexia", src: "/concierge services images/logos/logo.webp" },
-                { name: "n8n", src: "/concierge services images/logos/n8n.webp" },
+                { name: "Facebook Pixel", src: "/concierge services images/logos/html.webp" },
+                { name: "Google Tag Manager", src: "/concierge services images/logos/logo.webp" },
+                { name: "HubSpot Tracking", src: "/concierge services images/logos/n8n.webp" },
               ].map((logo) => (
                 <div
                   key={logo.name}
-                  className="flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm"
+                  className="flex flex-col items-center justify-center gap-3 p-2"
                 >
                   <img
                     src={logo.src}
                     alt={logo.name}
-                    className="h-12 w-full max-w-[120px] object-contain"
+                    className="h-36 w-full max-w-[320px] object-contain"
                   />
+                  <p className="text-center text-sm font-medium uppercase tracking-[0.2em] text-white/70">
+                    {logo.name}
+                  </p>
                 </div>
               ))}
             </div>
