@@ -6,6 +6,8 @@ import FaqSection from "@/components/sections/FaqSection";
 import ProfessionalWebSection from "@/components/sections/ProfessionalWebSection";
 import FooterLinksSection from "@/components/sections/FooterLinksSection";
 import PageTransition from "@/components/animations/PageTransition";
+import RichMultimediaSection from "@/components/sections/RichMultimediaSection";
+
 
 export const metadata: Metadata = {
   title: "Concierge Services | Vertexia - On-Demand Professional Website Edits",
@@ -119,6 +121,9 @@ export default function ConciergeServicesPage() {
             </div>
           </div>
         </section>
+
+        {/* Rich Multimedia Section */}
+        <RichMultimediaSection />
 
         {/* How It Works Section */}
         <HowItWorksSection showButton />
