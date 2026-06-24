@@ -1,3 +1,5 @@
+import ShinyText from "@/components/ShinyText";
+
 export default function WordPressHeroSection() {
   return (
     <section
@@ -10,14 +12,15 @@ export default function WordPressHeroSection() {
       <div className="relative z-10 mx-auto flex max-w-[1280px] flex-col items-center justify-start gap-8 px-4 pt-10 pb-2 sm:px-6 sm:py-14 lg:px-8">
         <h1 className="mx-auto max-w-[1200px] text-[110px] leading-[118px] font-medium tracking-[-0.03em] text-white/80 sm:text-[82px] sm:leading-[90px]">
           <div>
-             <span className="box-decoration-clone inline-block border-l-4 border-[#00b67a] bg-[linear-gradient(90deg,rgba(0,48,58,0.95)_0%,rgba(0,48,58,0)_100%)] px-2 py-2 text-white/90">
-
-              Get Your Wordpress Website
+            <span className="box-decoration-clone inline-block border-l-4 border-[#00b67a] bg-[linear-gradient(90deg,rgba(0,48,58,0.95)_0%,rgba(0,48,58,0)_100%)] px-2 py-2 text-white/90">
+              <ShinyText speed={3.5} className="inline" baseColor="rgba(255,255,255,0.7)">
+                Get Your Wordpress Website
+              </ShinyText>
             </span>
           </div>
 
           <div className="mt-2">
-            Built in Just 7 Days
+            <ShinyText speed={3.5} className="inline">Built in Just 7 Days</ShinyText>
           </div>
         </h1>
 

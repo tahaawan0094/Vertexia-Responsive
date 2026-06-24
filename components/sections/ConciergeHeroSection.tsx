@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import ShinyText from "@/components/ShinyText";
 
 export default function ConciergeHeroSection() {
   return (
@@ -21,11 +22,11 @@ export default function ConciergeHeroSection() {
 
         {/* Hero Title */}
         <h1 className="mx-auto max-w-[1100px] text-[72px] leading-[94px] font-medium tracking-[-0.03em] text-white/80 max-[640px]:text-[38px] max-[640px]:leading-[48px]">
-          Get the{"  "}
+          <ShinyText speed={3.5} className="inline">Get the</ShinyText>{"  "}
           <span className="box-decoration-clone inline-block border-l-4 border-[#109f7a] bg-[linear-gradient(-50deg,rgba(11,77,58,0)_22%,rgba(16,115,87,0.55))] px-3 py-1 text-white/90">
-            VIP experience
+            <ShinyText speed={3.5} className="inline" baseColor="rgba(255,255,255,0.7)">VIP experience</ShinyText>
           </span>{"  "}
-          with our Concierge Service
+          <ShinyText speed={3.5} className="inline">with our Concierge Service</ShinyText>
         </h1>
 
         {/* Subtitle */}

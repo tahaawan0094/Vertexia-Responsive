@@ -1,3 +1,5 @@
+import ShinyText from "@/components/ShinyText";
+
 export default function CustomWebsiteHeroSection() {
   return (
     <section
@@ -10,10 +12,14 @@ export default function CustomWebsiteHeroSection() {
       <div className="relative z-10 mx-auto flex max-w-[1280px] flex-col items-center justify-start gap-8 px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
         <h1 className="text-balance mx-auto max-w-[960px] text-[110px] leading-[118px] font-medium tracking-[-0.03em] text-white/80 sm:text-[82px] sm:leading-[90px]">
           <span className="box-decoration-clone block whitespace-nowrap sm:inline-block sm:whitespace-normal border-l-4 border-[#8b5cf6] bg-[linear-gradient(-50deg,rgba(139,92,246,0)_22%,rgba(139,92,246,0.65))] px-2 py-2 text-white/90">
-            Get a Custom
+            <ShinyText speed={3.5} className="inline" baseColor="rgba(255,255,255,0.7)">Get a Custom</ShinyText>
           </span>
-          <span className="block sm:inline">Website</span>
-          <span className="block max-w-[960px] mx-auto">Built for Performance & Scalability</span>
+          <span className="block sm:inline">
+            <ShinyText speed={3.5} className="inline">Website</ShinyText>
+          </span>
+          <span className="block max-w-[960px] mx-auto">
+            <ShinyText speed={3.5} className="inline">Built for Performance & Scalability</ShinyText>
+          </span>
         </h1>
 
         <div className="flex flex-wrap justify-center content-center text-center">

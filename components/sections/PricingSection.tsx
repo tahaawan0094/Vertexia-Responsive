@@ -1,6 +1,7 @@
 "use client";
 
 import { StaggerContainer, StaggerItem } from "@/components/animations/StaggerContainer";
+import ShinyText from "@/components/ShinyText";
 import { useState } from "react";
 
 export default function PricingSection() {
@@ -28,7 +29,7 @@ export default function PricingSection() {
         {/* Main Heading */}
         <StaggerItem>
           <h1 className="mb-8 text-balance text-[72px] font-medium leading-[90px] text-white max-[960px]:text-[56px] max-[960px]:leading-[68px] max-[640px]:text-[clamp(2.5rem,8vw,3.2rem)] max-[640px]:leading-tight">
-            Launch, Manage & Grow Your Business Online
+            <ShinyText speed={3.5} className="inline">Launch, Manage & Grow Your Business Online</ShinyText>
           </h1>
         </StaggerItem>
 
