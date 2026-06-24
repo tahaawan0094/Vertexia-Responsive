@@ -11,6 +11,7 @@ import {
   ThreeDScrollTriggerRow,
 } from "@/src/components/lightswind/3d-scroll-trigger";
 import { motion } from "framer-motion";
+import FooterLinksSection from "@/components/sections/FooterLinksSection";
 
 const testimonials = [
   {
@@ -419,78 +420,8 @@ export default function ConciergeClientPage() {
         </section>
 
         <ProfessionalWebSectionCopy />
-
-        {/* Service Resources Section */}
-        <section className="px-4 py-20 sm:px-6 lg:px-8 bg-[#09090c]">
-          <div className="mx-auto max-w-4xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Explore More Vertexia Services
-              </h2>
-              <p className="text-lg text-white/60 mb-8">
-                Discover our comprehensive range of web solutions to find the perfect fit for your business needs.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-[#121217] rounded-2xl p-6 border border-white/5 hover:border-white/10 hover:shadow-lg transition-all duration-300">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  <Link
-                    href="/get-custom-website"
-                    className="text-blue-400 hover:text-blue-300 transition-colors"
-                  >
-                    Get Custom Website &rarr;
-                  </Link>
-                </h3>
-                <p className="text-white/60 text-sm">
-                  Professional custom website design and development with full control and advanced performant features.
-                </p>
-              </div>
-
-              <div className="bg-[#121217] rounded-2xl p-6 border border-white/5 hover:border-white/10 hover:shadow-lg transition-all duration-300">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  <Link
-                    href="/get-wordpress-website"
-                    className="text-blue-400 hover:text-blue-300 transition-colors"
-                  >
-                    Get WordPress Website &rarr;
-                  </Link>
-                </h3>
-                <p className="text-white/60 text-sm">
-                  Get a fully built WordPress website in 7 days, complete with domains, hosting, setup, and support.
-                </p>
-              </div>
-
-              <div className="bg-[#121217] rounded-2xl p-6 border border-white/5 hover:border-white/10 hover:shadow-lg transition-all duration-300">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  <Link
-                    href="/pricing"
-                    className="text-blue-400 hover:text-blue-300 transition-colors"
-                  >
-                    View Our Pricing &rarr;
-                  </Link>
-                </h3>
-                <p className="text-white/60 text-sm">
-                  Transparent, affordable pricing plans tailored for small business launch, support, and growth packages.
-                </p>
-              </div>
-
-              <div className="bg-[#121217] rounded-2xl p-6 border border-white/5 hover:border-white/10 hover:shadow-lg transition-all duration-300">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  <Link
-                    href="/faqs"
-                    className="text-blue-400 hover:text-blue-300 transition-colors"
-                  >
-                    FAQs &rarr;
-                  </Link>
-                </h3>
-                <p className="text-white/60 text-sm">
-                  Transparent, affordable pricing plans tailored for small business launch, support, and growth packages.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+         <FooterLinksSection/>       
+      
       </main>
     </PageTransition>
   );
