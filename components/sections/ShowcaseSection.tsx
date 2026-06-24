@@ -263,7 +263,7 @@ export default function ShowcaseSection({ hideImages }: { hideImages?: boolean }
                   {marqueeLogos.map((logo, index) => (
                     <div
                       key={`${logo.name}-${index}`}
-                      className="flex h-20 min-w-[180px] items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-6 shadow-[0_10px_30px_rgba(0,0,0,0.2)]"
+                      className="flex h-20 min-w-[180px] items-center justify-center px-6"
                     >
                       {!hideImages ? (
                         <img
