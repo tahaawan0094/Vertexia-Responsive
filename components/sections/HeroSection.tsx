@@ -1,7 +1,9 @@
-"use client";
-
 import { StaggerContainer, StaggerItem } from "@/components/animations/StaggerContainer";
 import ShinyText from "@/components/ShinyText";
+import TrustedUsers from "@/components/TrustedUsers";
+
+
+
 
 
 const stars = Array.from({ length: 5 });
@@ -57,29 +59,18 @@ export default function HeroSection() {
           </div>
         </StaggerItem>
         <StaggerItem>
-          <div className="mb-4 flex flex-wrap items-center justify-center gap-[18px] text-[0.95rem] tracking-[0.04em]">
-            <span className="font-semibold">RATED 4.8 EXCELLENT</span>
-            <div className="flex gap-[6px]" aria-label="5 out of 5 stars">
-              {stars.map((_, index) => (
-                <span
-                  key={index}
-                  className="inline-flex h-[26px] w-[26px] items-center justify-center rounded-[4px] bg-[#00b67a]"
-                  aria-hidden="true"
-                >
-                  <svg viewBox="0 0 24 24" className="h-4 w-4 fill-white">
-                    <path d="M12 2.6l2.6 5.3 5.9.9-4.3 4.2 1 5.9L12 16.8 6.8 19.9l1-5.9-4.3-4.2 5.9-.9z" />
-                  </svg>
-                </span>
-              ))}
-            </div>
-            <div className="flex items-center gap-2 font-semibold">
-              <span className="inline-flex h-[22px] w-[22px] items-center justify-center rounded-full bg-[#00b67a]">
-                <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-white">
-                  <path d="M12 2.6l2.6 5.3 5.9.9-4.3 4.2 1 5.9L12 16.8 6.8 19.9l1-5.9-4.3-4.2 5.9-.9z" />
-                </svg>
-              </span>
-              <span>Trustpilot</span>
-            </div>
+          <div className="mb-4">
+            <TrustedUsers
+              avatars={[
+                "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80",
+                "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80",
+                "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80",
+                "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80"
+              ]}
+              rating={5}
+              totalUsersText={7000}
+              caption="Trusted by "
+            />
           </div>
         </StaggerItem>
         <StaggerItem>
