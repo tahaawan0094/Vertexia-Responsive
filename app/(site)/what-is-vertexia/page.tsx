@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "What is Vertexia? | A Modern Web Development & SEO Growth Partner",
   description: "Discover what Vertexia is, how it helps businesses build high-performance websites, improve online visibility, and create scalable digital growth systems designed for long-term success.",
   alternates: {
-    canonical: "https://vertexiaio.vercel.app/what-is-vertexia",
+    canonical: "https://vertexiaagency.com/what-is-vertexia",
   },
   openGraph: {
     title: "What is Vertexia? | A Modern Web Development & SEO Growth Partner",

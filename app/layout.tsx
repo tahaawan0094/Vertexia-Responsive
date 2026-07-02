@@ -26,7 +26,7 @@ const montserrat = Montserrat({
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vertexiaio.vercel.app"),
+  metadataBase: new URL("https://vertexiaagency.com"),
   title: "Vertexia - Web Development Company in Karachi, Pakistan",
   description: "Vertexia provides professional web development services. We build custom websites, ecommerce stores, and SEO-optimized digital solutions for growing businesses.",
   icons: {

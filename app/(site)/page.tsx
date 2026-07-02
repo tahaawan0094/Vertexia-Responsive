@@ -16,7 +16,7 @@ import FooterLinksSection from "@/components/sections/FooterLinksSection";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://vertexiaio.vercel.app/",
+    canonical: "https://vertexiaagency.com/",
   },
 };
 

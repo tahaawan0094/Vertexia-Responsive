@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     "vertexia refund",
   ],
   alternates: {
-    canonical: "https://vertexiaio.vercel.app/refund-policy",
+    canonical: "https://vertexiaagency.com/refund-policy",
   },
   openGraph: {
     title: "Refund Policy | Vertexia - 30-Day Money-Back Guarantee",
     description:
       "Vertexia's 30-day refund guarantee for web development services. Learn our complete refund policy, terms, eligibility requirements, and how to request a refund for custom website projects.",
-    url: "https://vertexiaio.vercel.app/refund-policy",
+    url: "https://vertexiaagency.com/refund-policy",
     type: "website",
     siteName: "Vertexia",
   },
@@ -146,7 +146,7 @@ export default function RefundPolicyPage() {
                 </Link>
               </li>
               <li>
-                <a href="https://vertexiaio.vercel.app/pricing" className="text-[#2563eb] hover:text-[#1d4ed8] underline">
+                <a href="https://vertexiaagency.com/pricing" className="text-[#2563eb] hover:text-[#1d4ed8] underline">
                   Pricing
                 </a>
               </li>
@@ -208,7 +208,7 @@ export default function RefundPolicyPage() {
                 </Link>
               </li>
               <li>
-                <a href="https://vertexiaio.vercel.app" className="text-[#2563eb] hover:text-[#1d4ed8] underline" target="_blank" rel="noopener noreferrer">
+                <a href="https://vertexiaagency.com" className="text-[#2563eb] hover:text-[#1d4ed8] underline" target="_blank" rel="noopener noreferrer">
                   Vertexia Official Website
                 </a>
               </li>

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Browse stunning website examples built by Vertexia for 1000+ business categories. Rated Excellent on Trustpilot by 5,000+ happy customers.",
   alternates: {
-    canonical: "https://vertexiaio.vercel.app/website-examples",
+    canonical: "https://vertexiaagency.com/website-examples",
   },
 };
 

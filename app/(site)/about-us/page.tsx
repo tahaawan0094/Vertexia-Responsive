@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Learn about Vertexia, our mission, and how we build fast, SEO-friendly websites that help businesses grow online.",
   alternates: {
-    canonical: "https://vertexiaio.vercel.app/about-us",
+    canonical: "https://vertexiaagency.com/about-us",
   },
 };
 

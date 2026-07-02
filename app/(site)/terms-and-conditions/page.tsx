@@ -9,7 +9,7 @@ const metadata: Metadata = {
   description:
     "Vertexia Terms and Conditions governing the use of web development and digital services.",
   alternates: {
-    canonical: "https://vertexiaio.vercel.app/terms-and-conditions",
+    canonical: "https://vertexiaagency.com/terms-and-conditions",
   },
 };
 

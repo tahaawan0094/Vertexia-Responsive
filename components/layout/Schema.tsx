@@ -1,6 +1,6 @@
 import React from "react";
 
-const SITE_URL = "https://vertexiaio.vercel.app";
+const SITE_URL = "https://vertexiaagency.com";
 const SITE_LOGO = `${SITE_URL}/new-header-logo.png`;
 
 const Schema = () => {

@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     "web design services",
   ],
   alternates: {
-    canonical: "https://vertexiaio.vercel.app/get-custom-website",
+    canonical: "https://vertexiaagency.com/get-custom-website",
   },
   openGraph: {
     title: "Get Custom Website | Vertexia - Professional Web Design & Development",
     description:
       "Professional custom website design and development service handled from start to finish. Fully built, SEO-optimized websites with ecommerce, bookings, and unlimited edits.",
-    url: "https://vertexiaio.vercel.app/get-custom-website",
+    url: "https://vertexiaagency.com/get-custom-website",
     type: "website",
     siteName: "Vertexia",
   },
@@ -409,7 +409,7 @@ export default function DoneForYouWebsitePage() {
 
           <div className="mt-12 p-8 bg-white rounded-lg border-l-4 border-blue-600">
             <h3 className="text-xl font-semibold text-slate-900 mb-2">Looking for WordPress Website Solutions?</h3>
-            <p className="text-slate-600 mb-4">We also offer <a href="https://vertexiaio.vercel.app/get-wordpress-website" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">WordPress website development</a> for those who prefer open-source solutions.</p>
+            <p className="text-slate-600 mb-4">We also offer <a href="https://vertexiaagency.com/get-wordpress-website" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">WordPress website development</a> for those who prefer open-source solutions.</p>
           </div>
         </div>
       </section>

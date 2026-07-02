@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     "WordPress hosting",
   ],
   alternates: {
-    canonical: "https://vertexiaio.vercel.app/get-wordpress-website",
+    canonical: "https://vertexiaagency.com/get-wordpress-website",
   },
   openGraph: {
     title: "Get WordPress Website | Vertexia - Professional WordPress Web Development",
     description:
       "Professional WordPress website design and development service. Custom WordPress solutions with full support, easy management, and scalable functionality.",
-    url: "https://vertexiaio.vercel.app/get-wordpress-website",
+    url: "https://vertexiaagency.com/get-wordpress-website",
     type: "website",
     siteName: "Vertexia",
   },

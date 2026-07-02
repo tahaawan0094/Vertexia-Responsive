@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Compare custom websites vs WordPress for 2026. Learn design, speed, SEO, security, cost, scalability, and which option suits your business best.",
   alternates: {
-    canonical: "https://vertexiaio.vercel.app/blogs/website-development-cost-pakistan-2026",
+    canonical: "https://vertexiaagency.com/blogs/website-development-cost-pakistan-2026",
   },
   openGraph: {
     title: "Custom Website vs WordPress: Which One Fits Your Business?",
@@ -63,19 +63,19 @@ export default function CustomVsWordPressArticle() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://vertexiaio.vercel.app/",
+        item: "https://vertexiaagency.com/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://vertexiaio.vercel.app/blogs",
+        item: "https://vertexiaagency.com/blogs",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Custom Website vs WordPress",
-        item: "https://vertexiaio.vercel.app/blogs/website-development-cost-pakistan-2026",
+        item: "https://vertexiaagency.com/blogs/website-development-cost-pakistan-2026",
       },
     ],
   };
@@ -89,24 +89,24 @@ export default function CustomVsWordPressArticle() {
     author: {
       "@type": "Person",
       name: "Taha Awan",
-      url: "https://vertexiaio.vercel.app/founder",
+      url: "https://vertexiaagency.com/founder",
     },
     publisher: {
       "@type": "Organization",
       name: "Vertexia",
       logo: {
         "@type": "ImageObject",
-        url: "https://vertexiaio.vercel.app/new-header-logo.png",
+        url: "https://vertexiaagency.com/new-header-logo.png",
       },
     },
     datePublished: "2026-06-18",
     dateModified: "2026-06-18",
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://vertexiaio.vercel.app/blogs/website-development-cost-pakistan-2026",
+      "@id": "https://vertexiaagency.com/blogs/website-development-cost-pakistan-2026",
     },
     image: [
-      "https://vertexiaio.vercel.app/Blog images/modern-web-development-digital-growth-by-vertexia.webp",
+      "https://vertexiaagency.com/Blog images/modern-web-development-digital-growth-by-vertexia.webp",
     ],
   };
 

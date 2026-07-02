@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Meet the founder of Vertexia, a Karachi-based web development agency specializing in custom websites, WordPress development, ecommerce solutions, and SEO services.",
   alternates: {
-    canonical: "https://vertexiaio.vercel.app/founder",
+    canonical: "https://vertexiaagency.com/founder",
   },
   openGraph: {
     title: "Meet the Founder of Vertexia | Web Development Agency",
     description:
       "Meet the founder of Vertexia, a Karachi-based web development agency specializing in custom websites, WordPress development, ecommerce solutions, and SEO services.",
-    url: "https://vertexiaio.vercel.app/founder",
+    url: "https://vertexiaagency.com/founder",
     type: "website",
     siteName: "Vertexia",
   },
@@ -24,14 +24,14 @@ export default function FounderPage() {
   const founderSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://vertexiaio.vercel.app/#taha-awan",
+    "@id": "https://vertexiaagency.com/#taha-awan",
     name: "Taha Awan",
     jobTitle: "CEO & Founder",
     worksFor: {
-      "@id": "https://vertexiaio.vercel.app/#organization",
+      "@id": "https://vertexiaagency.com/#organization",
     },
-    url: "https://vertexiaio.vercel.app/founder",
-    image: "https://vertexiaio.vercel.app/About-Us/founder-taha-awan.webp",
+    url: "https://vertexiaagency.com/founder",
+    image: "https://vertexiaagency.com/About-Us/founder-taha-awan.webp",
     sameAs: [
       "https://www.linkedin.com/in/vertexia-io-b03923410/",
       "https://www.facebook.com/profile.php?id=61589778596884",
@@ -235,8 +235,8 @@ export default function FounderPage() {
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-[#FF5A4E] font-bold">Website:</span>
-                  <a href="https://vertexiaio.vercel.app/" className="hover:text-[#FF5A4E] transition-colors">
-                    https://vertexiaio.vercel.app/
+                  <a href="https://vertexiaagency.com/" className="hover:text-[#FF5A4E] transition-colors">
+                    https://vertexiaagency.com/
                   </a>
                 </div>
               </div>

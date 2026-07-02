@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "View transparent pricing for websites, SEO, and marketing services. Affordable plans designed to help small businesses grow online.",
   alternates: {
-    canonical: "https://vertexiaio.vercel.app/pricing",
+    canonical: "https://vertexiaagency.com/pricing",
   },
 };
 

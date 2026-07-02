@@ -9,7 +9,7 @@ const metadata: Metadata = {
   description:
     "Vertexia Privacy Policy describing how we collect, use, store, and protect personal information.",
   alternates: {
-    canonical: "https://vertexiaio.vercel.app/privacy-policy",
+    canonical: "https://vertexiaagency.com/privacy-policy",
   },
 };
 
